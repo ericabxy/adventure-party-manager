@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import AddChar from './AddChar.jsx';
 import Character from './Character.jsx';
+import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 
 function EditParty ({  }) {
@@ -73,6 +74,7 @@ function EditParty ({  }) {
           </ListGroup.Item>
         ))}
       </ListGroup>
+      <Footer className="container" />
     </>
   )
 }
