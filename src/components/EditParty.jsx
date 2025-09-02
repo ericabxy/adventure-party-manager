@@ -74,7 +74,9 @@ function EditParty ({  }) {
           </ListGroup.Item>
         ))}
       </ListGroup>
-      <Footer className="container" />
+      {chars.length > 0 &&
+        <Footer />
+      }
     </>
   )
 }
