@@ -1,72 +1,58 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
+import React, { useEffect, useState } from 'react';
 
-import warriorM from '../assets/warrior_m.png';
-import warriorF from '../assets/warrior_f.png';
-import magicianM from '../assets/magician_m.png';
-import magicianF from '../assets/magician_f.png';
-import healerM from '../assets/healer_m.png';
-import healerF from '../assets/healer_f.png';
-import ninjaM from '../assets/ninja_m.png';
-import ninjaF from '../assets/ninja_f.png';
-import rangerM from '../assets/ranger_m.png';
-import rangerF from '../assets/ranger_f.png';
-import monkM from '../assets/monk_m.png';
-import monkF from '../assets/monk_f.png';
-
-const portraits = [
-  [ warriorM, warriorF ],
-  [ magicianM, magicianF ],
-  [ healerM, healerF ],
-  [ ninjaM, ninjaF ],
-  [ rangerM, rangerF ],
-  [ monkM, monkF ],
-];
+import Portrait from './Portrait.jsx';
 
 function AddChar ({ char, onDelete, onEdit }) {
-  const renameChar = char => {
-    const name = prompt('Enter a name');
-    onEdit({ ...char, named: name });
-  };
+  const [ classname, setClassname ] = useState(char.classname);
+  const [ gender, setGender ] = useState(char.gender);
+  const [ name1, setName1 ] = useState(char.name1);
+  
+  useEffect(() => {
+    onEdit({
+      ...char,
+      classname: classname,
+      gender: gender,
+      name1: name1
+    });
+  }, [classname, gender, name1])
 
   return (
     <>
       <div>
         <select
           style={{width: '100%'}}
-          value={char.class}
-          onChange={evt => onEdit({...char, class: evt.target.value})}
+          value={classname}
+          onChange={evt => setClassname(evt.target.value)}
         >
-          <option value="0">Warrior</option>
-          <option value="1">Magician</option>
-          <option value="2">Healer</option>
-          <option value="3">Ninja</option>
-          <option value="4">Ranger</option>
-          <option value="5">Monk</option>
+          <option value="Warrior">Warrior</option>
+          <option value="Magician">Magician</option>
+          <option value="Healer">Healer</option>
+          <option value="Ninja">Ninja</option>
+          <option value="Ranger">Ranger</option>
+          <option value="Monk">Monk</option>
         </select>
         <select
           style={{width: '100%'}}
-          value={char.gender}
-          onChange={evt => onEdit({...char, gender: evt.target.value})}
+          value={gender}
+          onChange={evt => setGender(evt.target.value)}
         >
           <option value="0">M</option>
           <option value="1">F</option>
         </select>
-      <Card.Img src={portraits[char.class][char.gender]} />
-      <input
-        style={{width: '100%', margin: '.25em 0'}}
-        type="button"
-        value="Rename"
-        className="editButton"
-        onClick={() => renameChar(char)}
-      />
-      <input
-        style={{width: '100%'}}
-        type="button"
-        value="Delete"
-        className="delButton"
-        onClick={() => onDelete(char.id)}
-      />
+        <Portrait classname={classname} gender={gender} />
+        <input
+          style={{width: '100%', margin: '1px 0'}}
+          type="text"
+          value={name1}
+          placeholder="Name"
+          onChange={evt => setName1(evt.target.value)}
+        />
+        <input
+          style={{width: '100%', margin: '1px 0'}}
+          type="button"
+          value="Delete"
+          onClick={() => onDelete(char.id)}
+        />
       </div>
     </>
   )

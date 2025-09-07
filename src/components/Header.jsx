@@ -1,17 +1,13 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+
+import Button from './Button';
 
 function Header ({ addChar }) {
   return (
     <header className="header">
       <h2 className="app-header">Assemble your party</h2>
       {addChar &&
-        <input
-          type="button"
-          value="AddChar"
-          className="btn"
-          onClick={addChar}
-        />
+        <Button onClick={addChar}>Add Char</Button>
       }
     </header>
   )

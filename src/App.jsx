@@ -1,9 +1,10 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import Container from 'react-bootstrap/Container';
+import React, { useEffect, useState } from 'react'
 import './App.css'
 
-import EditParty from './components/EditParty.jsx';
+import Footer from './components/Footer.jsx';
+import NavBar from './components/NavBar.jsx';
+import Party from './components/Party.jsx';
+import Status from './components/Status.jsx';
 
 function App() {
   const [ chars, setChars ] = useState([]);
@@ -20,19 +21,34 @@ function App() {
   const addChar = () => {
     const newChar = {
       id: uuidv4(),
-      class: chars.length,
+      class: 'warrior',
       gender: 0,
-      named: 'No Namedd',
+      named: 'No Name',
     };
     setChars([...chars, newChar]);
     localStorage.setItem('saveData', JSON.stringify([ ...chars, newChar ]));
   };
+  
+  const showParty = () => {
+    if (window.location.pathname === "/") {
+      return <Party />
+    }
+  }
+  
+  const showStatus = () => {
+    if (window.location.pathname === "/status") {
+      return <Status />
+    }
+  }
 
   return (
     <>
-      <div className="container">
-        <EditParty />
-      </div>
+      <NavBar />
+      <main>
+        {showParty()}
+        {showStatus()}
+      </main>
+      <Footer />
     </>
   )
 }

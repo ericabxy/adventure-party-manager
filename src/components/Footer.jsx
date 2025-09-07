@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer ({  }) {
   return (
-    <footer>
+    <footer className="bg-light">
       <div style={{textAlign: 'center'}}>
         <small>
           Application programming &copy; 2025 by Eric Abides.

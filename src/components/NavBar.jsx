@@ -1,0 +1,19 @@
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+function NavBar() {
+  return (
+    <Navbar expand="sm" className="bg-light">
+      <Container>
+        <Navbar.Brand href="/">Anti Fantasy</Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="status">Status</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
+  )
+}
+
+export default NavBar;

@@ -1,31 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import AddChar from './AddChar.jsx';
-import Character from './Character.jsx';
-import Footer from './Footer.jsx';
+import Button from './Button.jsx';
 import Header from './Header.jsx';
 
-function EditParty ({  }) {
+function Party () {
   const [ chars, setChars ] = useState([]);
   const charData = JSON.parse(localStorage.getItem('saveData'));
-
-  useEffect(() => {
-    if (charData == null) {
-      setChars([]);
-    } else {
-      setChars(charData);
-    }
-  }, [])
-
+  
   const addChar = () => {
     const newChar = {
       id: uuidv4(),
-      class: chars.length,
+      classname: 'Warrior',
       gender: 0,
-      named: 'No Name',
+      name1: '',
     };
     setChars([...chars, newChar]);
     localStorage.setItem('saveData', JSON.stringify([...chars, newChar]));
@@ -49,13 +39,21 @@ function EditParty ({  }) {
       return x;
     });
     localStorage.setItem('saveData', JSON.stringify(saveData));
-    window.location.reload();
+    console.log(localStorage.getItem('saveData'));
   };
-  
+
+  useEffect(() => {
+    if (charData == null) {
+      setChars([]);
+    } else {
+      setChars(charData);
+    }
+  }, [])
+
   return (
     <>
       <Header addChar={chars.length < 4 ? addChar : null} />
-      <ListGroup className="my-2" horizontal>
+      <ListGroup horizontal>
         {chars.map((char, x) => (
           <ListGroup.Item style={{width: '25%'}}>
             <AddChar
@@ -67,16 +65,8 @@ function EditParty ({  }) {
           </ListGroup.Item>
         ))}
       </ListGroup>
-      <ListGroup>
-        {chars.map((char, x) => (
-          <ListGroup.Item>
-            <Character char={char} />
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-      <Footer />
     </>
   )
 }
 
-export default EditParty;
+export default Party;
