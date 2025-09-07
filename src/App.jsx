@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 
+import Battle from './components/Battle.jsx';
 import Footer from './components/Footer.jsx';
 import NavBar from './components/NavBar.jsx';
 import Party from './components/Party.jsx';
@@ -15,6 +16,7 @@ function App() {
       <main>
         {subpage === 'party' && <Party />}
         {subpage === 'status' && <Status />}
+        {subpage === 'battle' && <Battle />}
       </main>
       <Footer />
     </>

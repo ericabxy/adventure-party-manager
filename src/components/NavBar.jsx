@@ -10,6 +10,7 @@ function NavBar({ onClick }) {
         <Navbar.Brand href="" onClick={() => onClick('party')}>Anti Fantasy</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="" onClick={() => onClick('status')}>Status</Nav.Link>
+          <Nav.Link href="" onClick={() => onClick('battle')}>Battle</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
