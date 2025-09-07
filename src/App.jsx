@@ -7,28 +7,6 @@ import Party from './components/Party.jsx';
 import Status from './components/Status.jsx';
 
 function App() {
-  const [ chars, setChars ] = useState([]);
-  const charData = JSON.parse(localStorage.getItem('saveData'));
-
-  useEffect(() => {
-    if (charData == null) {
-      setChars([]);
-    } else {
-      setChars(charData);
-    }
-  }, [])
-  
-  const addChar = () => {
-    const newChar = {
-      id: uuidv4(),
-      class: 'warrior',
-      gender: 0,
-      named: 'No Name',
-    };
-    setChars([...chars, newChar]);
-    localStorage.setItem('saveData', JSON.stringify([ ...chars, newChar ]));
-  };
-  
   const showParty = () => {
     if (window.location.pathname === "/") {
       return <Party />
@@ -40,13 +18,15 @@ function App() {
       return <Status />
     }
   }
-
+  
+  const [ subpage, setSubpage ] = useState('party');
+  
   return (
     <>
-      <NavBar />
+      <NavBar onClick={setSubpage} />
       <main>
-        {showParty()}
-        {showStatus()}
+        {subpage === 'party' && <Party />}
+        {subpage === 'status' && <Status />}
       </main>
       <Footer />
     </>

@@ -39,7 +39,6 @@ function Party () {
       return x;
     });
     localStorage.setItem('saveData', JSON.stringify(saveData));
-    console.log(localStorage.getItem('saveData'));
   };
 
   useEffect(() => {
