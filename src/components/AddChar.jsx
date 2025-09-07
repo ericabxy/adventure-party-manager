@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
+import ChooseClass from './ChooseClass.jsx';
+import ChooseStyle from './ChooseStyle.jsx';
 import Portrait from './Portrait.jsx';
 
 function AddChar ({ char, onDelete, onEdit }) {
   const [ classname, setClassname ] = useState(char.classname);
   const [ gender, setGender ] = useState(char.gender);
   const [ name1, setName1 ] = useState(char.name1);
-  
+
+  // Update callback if anything has changed
   useEffect(() => {
     onEdit({
       ...char,
@@ -19,26 +22,8 @@ function AddChar ({ char, onDelete, onEdit }) {
   return (
     <>
       <div>
-        <select
-          style={{width: '100%'}}
-          value={classname}
-          onChange={evt => setClassname(evt.target.value)}
-        >
-          <option value="Warrior">Warrior</option>
-          <option value="Magician">Magician</option>
-          <option value="Healer">Healer</option>
-          <option value="Ninja">Ninja</option>
-          <option value="Ranger">Ranger</option>
-          <option value="Monk">Monk</option>
-        </select>
-        <select
-          style={{width: '100%'}}
-          value={gender}
-          onChange={evt => setGender(evt.target.value)}
-        >
-          <option value="0">M</option>
-          <option value="1">F</option>
-        </select>
+        <ChooseClass value={classname} onClick={setClassname} />
+        <ChooseStyle id={char.id} value={gender} onClick={setGender} />
         <Portrait classname={classname} gender={gender} />
         <input
           style={{width: '100%', margin: '1px 0'}}
