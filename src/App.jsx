@@ -7,18 +7,6 @@ import Party from './components/Party.jsx';
 import Status from './components/Status.jsx';
 
 function App() {
-  const showParty = () => {
-    if (window.location.pathname === "/") {
-      return <Party />
-    }
-  }
-  
-  const showStatus = () => {
-    if (window.location.pathname === "/status") {
-      return <Status />
-    }
-  }
-  
   const [ subpage, setSubpage ] = useState('party');
   
   return (
