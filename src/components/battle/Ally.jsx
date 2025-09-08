@@ -11,7 +11,7 @@ function Ally ({ char }) {
         style={{float: 'left', width: '32px'}}
       />
       <div>{char.name1 ? char.name1 : '...'}</div>
-      <div>20</div>
+      <div><strong>HP:</strong> 20</div>
     </div>
   )
 }

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'react-bootstrap/Image';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 import skeleton1 from '../../assets/skeleton_1.png';
+import './battle.css';
 
-function Enemies ({  }) {
+function Enemies ({ enemyList }) {
   const targetlist = [
     skeleton1,
     skeleton1,
@@ -13,24 +15,13 @@ function Enemies ({  }) {
   ]
 
   return (
-    <>
-      <div style={{
-          backgroundColor: 'black',
-          display: 'grid',
-          flexDirection: 'column',
-          flexWrap: 'wrap'
-        }}
-      >
-        {targetlist.map((image) => (
-          <div style={{}}>
-            <Image
-              src={image}
-              style={{border: '1px dashed white'}}
-            />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="enemy-box">
+      {targetlist.map((image) => (
+        <div className="enemy">
+          <img alt="enemy" src={image} />
+        </div>
+      ))}
+    </div>
   )
 }
 
