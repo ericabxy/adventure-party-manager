@@ -2,15 +2,17 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavLink from './NavLink.jsx';
 
-function NavBar({ onClick }) {
+function NavBar({ links, onClick }) {
   return (
     <Navbar expand="sm" className="bg-light">
       <Container>
         <Navbar.Brand href="#" onClick={() => onClick('party')}>Anti Fantasy</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#status" onClick={() => onClick('status')}>Status</Nav.Link>
-          <Nav.Link href="#battle" onClick={() => onClick('battle')}>Battle</Nav.Link>
+          {links.map((name) => (
+            <NavLink path={name} onClick={onClick} />
+          ))}
         </Nav>
       </Container>
     </Navbar>

@@ -48,21 +48,7 @@ function Party () {
       setChars(charData);
     }
   }, [])
-
-  const download = () => {
-    const jsonData = new Blob([JSON.stringify(charData)], { type: 'application/json' });
-    const jsonUrl = URL.createObjectURL(jsonData);
-    const link = document.createElement('a');
-    link.href = jsonURL;
-    link.download = `party.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   
-  const jsonData = new Blob([JSON.stringify(charData)], {type: 'application/json'});
-  const jsonUrl = URL.createObjectURL(jsonData); 
-
   return (
     <>
       <Header addChar={chars.length < 4 ? addChar : null} />
@@ -78,9 +64,6 @@ function Party () {
           </ListGroup.Item>
         ))}
       </ListGroup>
-      <div>
-        <a href={jsonUrl}>Save Data</a>
-      </div>
     </>
   )
 }
