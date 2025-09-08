@@ -12,10 +12,10 @@ import monk1 from './monk_a_attack_west_1.png';
 import monk2 from './monk_b_attack_west_1.png';
 
 export default {
-  'Warrior': [ warrior1, warrior2 ],
-  'Magician': [ magician1, magician2 ],
-  'Healer': [ healer1, healer2 ],
-  'Ninja': [ ninja1, ninja2 ],
-  'Ranger': [ ranger1, ranger2 ],
-  'Monk': [ monk1, monk2 ]
+  'Warrior': { 'a': warrior1, 'b': warrior2 },
+  'Magician': { 'a': magician1, 'b': magician2 },
+  'Healer': { 'a': healer1, 'b': healer2 },
+  'Ninja': { 'a': ninja1, 'b': ninja2 },
+  'Ranger': { 'a': ranger1, 'b': ranger2 },
+  'Monk': { 'a': monk1, 'b': monk2 }
 }

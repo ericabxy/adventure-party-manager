@@ -12,7 +12,7 @@ import monk1 from './monk_a.png';
 import monk2 from './monk_b.png';
 
 const warrior = {
-    sprite: [ warrior1, warrior2 ],
+    portrait: { 'a': warrior1, 'b': warrior2 },
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -23,7 +23,7 @@ const warrior = {
 }
 
 const magician = {
-    sprite: [ magician1, magician2 ],
+    portrait: { 'a': magician1, 'b': magician2 },
     stats: {
         'Acc': 3,
         'Vig': 1,
@@ -34,7 +34,7 @@ const magician = {
 }
 
 const healer = {
-    sprite: [ healer1, healer2 ],
+    portrait: { 'a': healer1, 'b': healer2 },
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -45,7 +45,7 @@ const healer = {
 }
 
 const ninja = {
-    sprite: [ ninja1, ninja2 ],
+    portrait: { 'a': ninja1, 'b': ninja2 },
     stats: {
         'Acc': 4,
         'Vig': 2,
@@ -56,7 +56,7 @@ const ninja = {
 }
 
 const ranger = {
-    sprite: [ ranger1, ranger2 ],
+    portrait: { 'a': ranger1, 'b': ranger2 },
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -67,7 +67,7 @@ const ranger = {
 }
 
 const monk = {
-    sprite: [ monk1, monk2 ],
+    portrait: { 'a': monk1, 'b': monk2 },
     stats: {
         'Acc': 2,
         'Vig': 5,

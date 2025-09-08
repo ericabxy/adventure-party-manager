@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import ChooseClass from './ChooseClass.jsx';
 import ChooseStyle from './ChooseStyle.jsx';
 import Portrait from './Portrait.jsx';
@@ -23,7 +22,7 @@ function AddChar ({ char, onDelete, onEdit }) {
     <>
       <div>
         <ChooseClass value={classname} onClick={setClassname} />
-        <ChooseStyle id={char.id} value={gender} onClick={setGender} />
+        <ChooseStyle chara={classname} value={gender} onClick={setGender} />
         <Portrait classname={classname} gender={gender} />
         <input
           style={{width: '100%', margin: '1px 0'}}

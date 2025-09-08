@@ -9,13 +9,6 @@
   max-width: 15%;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 main {
   max-width: 600px;
   margin: 30px auto;
@@ -46,13 +39,9 @@ main {
 
 @media (max-width: 375px) {
   main {
-
-  max-width: 95%;
+    max-width: 95%;
   }
-  .app-header {
-
-  font-size: 20px;
-  }
+  
   .spinnerContainer {
     margin: 250px auto 0 auto;
     max-width: 45%;
@@ -62,10 +51,6 @@ main {
 @media (max-width: 320px) {
   main {
     max-width: 95%;
-  }
-
-  .app-header {
-    font-size: 18px;
   }
 
   .spinnerContainer {

@@ -14,7 +14,7 @@ function Party () {
     const newChar = {
       id: uuidv4(),
       classname: 'Warrior',
-      gender: 0,
+      gender: 'a',
       name1: '',
     };
     setChars([...chars, newChar]);
@@ -51,7 +51,19 @@ function Party () {
   
   return (
     <>
-      <Header addChar={chars.length < 4 ? addChar : null} />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '20px'
+        }}
+      >
+        <h3>Assemble your party</h3>
+        {chars.length < 4 &&
+          <Button onClick={addChar}>Add Char</Button>
+        }
+      </div>
       <ListGroup horizontal>
         {chars.map((char, x) => (
           <ListGroup.Item style={{width: '25%'}}>

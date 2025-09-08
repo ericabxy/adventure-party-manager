@@ -1,6 +1,6 @@
 import React from 'react';
 
-import portraits from '../assets/portraits';
+import charaset from '../assets/charaset';
 
 function ChooseClass ({ value, onClick }) {
   return (
@@ -9,7 +9,7 @@ function ChooseClass ({ value, onClick }) {
       value={value}
       onChange={evt => onClick(evt.target.value)}
     >
-      {Object.keys(portraits).map((name, x) => (
+      {Object.keys(charaset).map((name) => (
         <option value={name}>{name}</option>
       ))}
     </select>

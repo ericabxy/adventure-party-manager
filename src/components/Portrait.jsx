@@ -1,12 +1,12 @@
 import React from 'react';
 
-import portraits from '../assets/portraits';
+import charaset from '../assets/charaset';
 
 function Portrait ({ classname, gender }) {
   return (
     <img
       style={{width: '100%', margin: '1px 0'}}
-      src={portraits[classname][gender]}
+      src={charaset[classname]['portrait'][gender]}
     />
   )
 }
