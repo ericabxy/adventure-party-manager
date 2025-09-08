@@ -8,7 +8,7 @@ function NavBar({ links, onClick }) {
   return (
     <Navbar expand="sm" className="bg-light">
       <Container>
-        <Navbar.Brand href="#" onClick={() => onClick('party')}>Anti Fantasy</Navbar.Brand>
+        <Navbar.Brand>Anti Fantasy</Navbar.Brand>
         <Nav className="me-auto">
           {links.map((name) => (
             <NavLink path={name} onClick={onClick} />
