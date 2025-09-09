@@ -12,16 +12,20 @@
   height: var(--height);
 }
 
-.sprite.step-1 {
+.sprite.step-0 {
   background-position-x: 0;
 }
 
-.sprite.step-2 {
+.sprite.step-1 {
   background-position-x: calc(0em - var(--width));
 }
 
-.sprite.step-3 {
+.sprite.step-2 {
   background-position-x: calc(0em - var(--width) * 2);
+}
+
+.sprite.step-3 {
+  background-position-x: calc(0em - var(--width) * 3);
 }
 
 .sprite.north {

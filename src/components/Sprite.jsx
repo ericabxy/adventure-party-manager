@@ -1,11 +1,8 @@
 import React from 'react'
 
-function Sprite ({ className }) {
+function Sprite ({ children }) {
   return (
-    <div
-      className={`sprite ${className} south step-2`}
-      style={{display: 'block', margin: '.25em auto'}}
-    />
+    <div className={`sprite ${children}`} />
   )
 }
 

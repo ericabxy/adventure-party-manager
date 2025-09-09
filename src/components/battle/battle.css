@@ -1,4 +1,13 @@
-.enemy-box {
+.allies-box {
+  align-content: start; /* do not stretch, and collapse to start of box */
+  background-color: black;
+  display: flex;
+  flex-flow: column wrap; /* arrange vertically, creating new columns as needed */
+  justify-content: start;
+  max-height: 250px; /* limit height so wrap works */
+}
+
+.enemies-box {
   align-content: start; /* do not stretch, and collapse to start of box */
   background-color: black;
   display: flex;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 
-import Allies from './battle/Allies.jsx';
-import Enemies from './battle/Enemies.jsx';
+import AllyStatus from './battle/AllyStatus';
+import Enemies from './battle/Enemies';
+import Sprite from './Sprite';
 
 function Battle ({  }) {
   const [ chars, setChars ] = useState([]);
@@ -20,22 +20,16 @@ function Battle ({  }) {
   }, [])
 
   return (
-    <>
-      <Container>
-        <Row>
-          <Col xs={9}>
-            <Enemies />
-          </Col>
-          <Col xs={3}>
-            <Allies chars={chars}/>
-          </Col>
-        </Row>
-      </Container>
-      <div>
-        {
-        }
-      </div>
-    </>
+    <Container>
+      <Row>
+        <Col>
+          <Enemies />
+        </Col>
+        <Col>
+          <AllyStatus chars={chars}/>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
