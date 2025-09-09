@@ -1,0 +1,47 @@
+img.portrait.Warrior.masc {
+  content: url('./assets/warrior_a_face_update.png');
+}
+
+img.portrait.Magician.masc {
+  content: url('./assets/magician_a_face_update.png');
+}
+
+img.portrait.Healer.masc {
+  content: url('./assets/healer_a_face_update.png');
+}
+
+img.portrait.Ninja.masc {
+  content: url('./assets/ninja_a_face_update.png');
+}
+
+img.portrait.Ranger.masc {
+  content: url('./assets/ranger_a_face_update.png');
+}
+
+img.portrait.Monk.masc {
+  content: url('./assets/monk_a_face_update.png');
+}
+
+img.portrait.Warrior.femme {
+  content: url('./assets/warrior_b_face_update.png');
+}
+
+img.portrait.Magician.femme {
+  content: url('./assets/magician_b_face_update.png');
+}
+
+img.portrait.Healer.femme {
+  content: url('./assets/healer_b_face_update.png');
+}
+
+img.portrait.Ninja.femme {
+  content: url('./assets/ninja_b_face_update.png');
+}
+
+img.portrait.Ranger.femme {
+  content: url('./assets/ranger_b_face_update.png');
+}
+
+img.portrait.Monk.femme {
+  content: url('./assets/monk_b_face_update.png');
+}

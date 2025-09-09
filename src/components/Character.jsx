@@ -1,4 +1,5 @@
 import React from 'react';
+import Portrait from './Portrait.jsx';
 
 import avatars from '../assets/avatars';
 import charaset from '../assets/charaset';
@@ -10,7 +11,7 @@ function Character ({ char }) {
   
   return (
     <div>
-      <img src={image} style={{float: 'left', height: '96px'}}/>
+      <Portrait charaset={char.classname} variant={char.gender} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <div>{char.name1 ? char.name1 : '...'}</div>
         <div>{char.classname}</div>

@@ -6,6 +6,16 @@
   height: 18px;
 }
 
+.sprite-viewport.em2 {
+  width: 2em;
+  height: 2.25em;
+}
+
+.sprite-viewport.em4 {
+  width: 4em;
+  height: 4.50em;
+}
+
 .sprite-viewport.x2 {
   width: 32px;
   height: 36px;
@@ -20,16 +30,36 @@ img.sprite {
   --width: 16px;
   --height: 18px;
   position: absolute;
+  width: 48px;
+  height: 72px;
+}
+
+img.sprite.em2 {
+  --width: 2em;
+  --height: 2.25em;
+  width: 6em;
+  height: 9em;
+}
+
+img.sprite.em4 {
+  --width: 4em;
+  --height: 4.50em;
+  width: 12em;
+  height: 18em;
 }
 
 img.sprite.x2 {
   --width: 32px;
   --height: 36px;
+  width: 96px;
+  height: 144px;
 }
 
 img.sprite.x3 {
   --width: 48px;
   --height: 54px;
+  width: 144px;
+  height: 216px;
 }
 
 img.Warrior.masc {
@@ -85,11 +115,11 @@ img.step-1 {
 }
 
 img.step-2 {
-  left: calc(0px - var(--width));
+  left: calc(0em - var(--width));
 }
 
-img.step-3 img {
-  left: calc(0px - var(--width) * 2);
+img.step-3 {
+  left: calc(0em - var(--width) - var(--width));
 }
 
 img.north {
@@ -97,13 +127,13 @@ img.north {
 }
 
 img.east {
-  top: calc(0px - var(--height));
+  top: calc(0em - var(--height));
 }
 
 img.south {
-  top: calc(0px - var(--height) * 2);
+  top: calc(0em - var(--height) - var(--height));
 }
 
 img.west {
-  top: calc(0px - var(--height) * 3);
+  top: calc(0em - var(--height) - var(--height) - var(--height));
 }

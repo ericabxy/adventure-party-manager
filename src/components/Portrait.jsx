@@ -1,17 +1,17 @@
 import React from 'react';
+import '../portrait.css';
 
-import avatars from '../assets/avatars';
-import charaset from '../assets/charaset';
-import faces from '../assets/faces';
-
-function Portrait ({ classname, gender }) {
-  const image = faces[classname][gender];
+function Portrait ({ charaset, variant }) {
+  const gender = variant == 'b' ? 'femme' : 'masc';
 
   return (
-    <img className="portrait"
-      alt={classname}
-      src={image}
-    />
+    <div style={{float: 'left'}}>
+      <img
+        alt={charaset}
+        className={`portrait ${charaset} ${gender}`}
+        style={{width: '75px', imageRendering: 'pixelated'}}
+      />
+    </div>
   )
 }
 
