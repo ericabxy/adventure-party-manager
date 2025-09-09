@@ -35,7 +35,7 @@ function AddChar ({ char, onDelete, onEdit }) {
       <div>
         <ChooseClass value={classname} onClick={setClassname} />
         <ChooseStyle chara={classname} value={gender} onClick={setGender} />
-        <Sprite charaset={classname} direct="south" scale="em4" variant={gender} />
+        <Sprite charaset={classname} direct="west" scale="em2" variant={gender} />
         <input
           style={{width: '100%', margin: '1px 0'}}
           type="text"

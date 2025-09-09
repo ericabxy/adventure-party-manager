@@ -1,16 +1,16 @@
 import React from 'react';
 import '../portrait.css';
 
+import image from '../assets/react.svg';
+
 function Portrait ({ charaset, variant }) {
   const gender = variant == 'b' ? 'femme' : 'masc';
+  const onClick = evt => {
+    console.log(evt);
+  }
 
   return (
-    <div style={{float: 'left'}}>
-      <img
-        alt={charaset}
-        className={`portrait ${charaset} ${gender}`}
-        style={{width: '75px', imageRendering: 'pixelated'}}
-      />
+    <div className={`portrait ${charaset} ${gender}`} style={{float: 'left'}}>
     </div>
   )
 }

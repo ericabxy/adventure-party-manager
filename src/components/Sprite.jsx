@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../sprite.css';
 
 function Sprite ({ charaset, direct, scale, variant }) {
   const gender = variant == 'b' ? 'femme' : 'masc';
@@ -6,13 +7,9 @@ function Sprite ({ charaset, direct, scale, variant }) {
 
   return (
     <div
-      className={`sprite-viewport ${scale}`}
+      className={`sprite ${charaset} ${gender} south step-2`}
       style={{display: 'block', margin: '1em auto'}}
     >
-      <img
-        className={`sprite ${scale} ${charaset} ${gender} ${direct} step-2`}
-        alt="sprite"
-      />
     </div>
   )
 }

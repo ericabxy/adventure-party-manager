@@ -8,6 +8,8 @@ import faces from '../assets/faces';
 function Character ({ char }) {
   const image = faces[char.classname][char.gender]
   const stats = charaset[char.classname].stats;
+  const vigor = charaset[char.classname].stats['Vig'];
+  const hitpoints = 20 + (vigor * 6 / 2);
   
   return (
     <div>
@@ -18,6 +20,7 @@ function Character ({ char }) {
         <div>Lv. 1</div>
       </div>
       <div style={{float: 'right'}}>
+        <div>{hitpoints}</div>
         {Object.keys(stats).map((name, x) => (
           <>
             <strong>{name}: </strong>

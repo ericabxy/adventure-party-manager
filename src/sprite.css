@@ -1,0 +1,86 @@
+.sprite {
+  --width: 4em;
+  --height: 4.50em;
+  --iw: calc(var(--width) * 3);
+  --ih: calc(var(--height) * 4);
+  background-size: var(--iw) var(--ih);
+  image-rendering: pixelated;
+  width: var(--width);
+  height: var(--height);
+}
+
+.sprite.step-1 {
+  background-position-x: 0;
+}
+
+.sprite.step-2 {
+  background-position-x: calc(0em - var(--width));
+}
+
+.sprite.step-3 {
+  background-position-x: calc(0em - var(--width) * 2);
+}
+
+.sprite.north {
+  background-position-y: 0;
+}
+
+.sprite.east {
+  background-position-y: calc(0em - var(--height));
+}
+
+.sprite.south {
+  background-position-y: calc(0em - var(--height) * 2);
+}
+
+.sprite.west {
+  background-position-y: calc(0em - var(--height) * 3);
+}
+
+.sprite.Warrior.masc {
+  background-image: url('./assets/warrior_a.png');
+}
+
+.sprite.Magician.masc {
+  background-image: url('./assets/magician_a.png');
+}
+
+.sprite.Healer.masc {
+  background-image: url('./assets/healer_a.png');
+}
+
+.sprite.Ninja.masc {
+  background-image: url('./assets/ninja_a.png');
+}
+
+.sprite.Ranger.masc {
+  background-image: url('./assets/ranger_a.png');
+}
+
+.sprite.Monk.masc {
+  background-image: url('./assets/monk_a.png');
+}
+
+.sprite.Warrior.femme {
+  background-image: url('./assets/warrior_b.png');
+}
+
+.sprite.Magician.femme {
+  background-image: url('./assets/magician_b.png');
+}
+
+.sprite.Healer.femme {
+  background-image: url('./assets/healer_b.png');
+}
+
+.sprite.Ninja.femme {
+  background-image: url('./assets/ninja_b.png');
+}
+
+.sprite.Ranger.femme {
+  background-image: url('./assets/ranger_b.png');
+}
+
+.sprite.Monk.femme {
+  background-image: url('./assets/monk_b.png');
+}
