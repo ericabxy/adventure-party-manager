@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './party.css';
 
 import AddChar from './AddChar.jsx';
 import Button from './Button.jsx';
-import Header from './Header.jsx';
 
 function Party () {
   const [ chars, setChars ] = useState([]);
@@ -51,7 +51,7 @@ function Party () {
   
   return (
     <>
-      <div
+      <div className="header"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -59,23 +59,20 @@ function Party () {
           marginBottom: '20px'
         }}
       >
-        <h3>Assemble your party</h3>
         {chars.length < 4 &&
           <Button onClick={addChar}>Add Char</Button>
         }
       </div>
-      <ListGroup horizontal>
+      <div className="party-list">
         {chars.map((char, x) => (
-          <ListGroup.Item style={{width: '25%'}}>
-            <AddChar
-              id={char.id}
-              char={char}
-              onDelete={delChar}
-              onEdit={modChar}
-            />
-          </ListGroup.Item>
+          <AddChar
+            id={char.id}
+            char={char}
+            onDelete={delChar}
+            onEdit={modChar}
+          />
         ))}
-      </ListGroup>
+      </div>
     </>
   )
 }

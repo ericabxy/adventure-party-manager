@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import ListGroup from 'react-bootstrap/ListGroup';
 import ChooseClass from './ChooseClass.jsx';
 import ChooseStyle from './ChooseStyle.jsx';
 import Portrait from './Portrait.jsx';
+import Sprite from './Sprite.jsx';
+
+import avatars from '../assets/avatars';
 
 function AddChar ({ char, onDelete, onEdit }) {
   const [ classname, setClassname ] = useState(char.classname);
@@ -19,11 +23,19 @@ function AddChar ({ char, onDelete, onEdit }) {
   }, [classname, gender, name1])
 
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: 'WhiteSmoke',
+        borderRadius: '.25em',
+        margin: '1em 2em',
+        maxWidth: '10em',
+        padding: '1em'
+      }}
+    >
       <div>
         <ChooseClass value={classname} onClick={setClassname} />
         <ChooseStyle chara={classname} value={gender} onClick={setGender} />
-        <Portrait classname={classname} gender={gender} />
+        <Sprite charaset={classname} direct="south" scale="x3" variant={gender} />
         <input
           style={{width: '100%', margin: '1px 0'}}
           type="text"
@@ -38,7 +50,7 @@ function AddChar ({ char, onDelete, onEdit }) {
           onClick={() => onDelete(char.id)}
         />
       </div>
-    </>
+    </div>
   )
 }
 

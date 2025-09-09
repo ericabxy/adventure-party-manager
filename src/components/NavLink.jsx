@@ -7,9 +7,10 @@ function NavLink ({ path }) {
     window.history.pushState({}, '', path)
     window.dispatchEvent(new PopStateEvent('changescreen'))
   };
+  const basename = import.meta.env.DEV ? '/' : '/adventure-party-manager/';
 
   return (
-    <Nav.Link href={path} onClick={onClick}>
+    <Nav.Link href={basename + path} onClick={onClick}>
       {path.charAt(0).toUpperCase() + path.slice(1)}
     </Nav.Link>
   )

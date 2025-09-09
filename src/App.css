@@ -1,0 +1,109 @@
+.sprite-viewport {
+  image-rendering: pixelated;
+  overflow: hidden;
+  position: relative;
+  width: 16px;
+  height: 18px;
+}
+
+.sprite-viewport.x2 {
+  width: 32px;
+  height: 36px;
+}
+
+.sprite-viewport.x3 {
+  width: 48px;
+  height: 54px;
+}
+
+img.sprite {
+  --width: 16px;
+  --height: 18px;
+  position: absolute;
+}
+
+img.sprite.x2 {
+  --width: 32px;
+  --height: 36px;
+}
+
+img.sprite.x3 {
+  --width: 48px;
+  --height: 54px;
+}
+
+img.Warrior.masc {
+  content: url('./assets/warrior_a.png');
+}
+
+img.Magician.masc {
+  content: url('./assets/magician_a.png');
+}
+
+img.Healer.masc {
+  content: url('./assets/healer_a.png');
+}
+
+img.Ninja.masc {
+  content: url('./assets/ninja_a.png');
+}
+
+img.Ranger.masc {
+  content: url('./assets/ranger_a.png');
+}
+
+img.Monk.masc {
+  content: url('./assets/monk_a.png');
+}
+
+img.Warrior.femme {
+  content: url('./assets/warrior_b.png');
+}
+
+img.Magician.femme {
+  content: url('./assets/magician_b.png');
+}
+
+img.Healer.femme {
+  content: url('./assets/healer_b.png');
+}
+
+img.Ninja.femme {
+  content: url('./assets/ninja_b.png');
+}
+
+img.Ranger.femme {
+  content: url('./assets/ranger_b.png');
+}
+
+img.Monk.femme {
+  content: url('./assets/monk_b.png');
+}
+
+img.step-1 {
+  left: 0;
+}
+
+img.step-2 {
+  left: calc(0px - var(--width));
+}
+
+img.step-3 img {
+  left: calc(0px - var(--width) * 2);
+}
+
+img.north {
+  top: 0;
+}
+
+img.east {
+  top: calc(0px - var(--height));
+}
+
+img.south {
+  top: calc(0px - var(--height) * 2);
+}
+
+img.west {
+  top: calc(0px - var(--height) * 3);
+}

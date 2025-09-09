@@ -11,7 +11,7 @@ import Status from './components/Status.jsx';
 
 function App() {
   const [ subpage, setSubpage ] = useState('party');
-  
+
   return (
     <>
       <NavBar links={['party', 'status', 'battle', 'save']} onClick={setSubpage} />

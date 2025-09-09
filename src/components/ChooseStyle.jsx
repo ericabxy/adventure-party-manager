@@ -1,6 +1,7 @@
 import React from 'react';
 
 import charaset from '../assets/charaset';
+import faces from '../assets/faces';
 
 function ChooseStyle ({ chara, value, onClick }) {
   /* Originally "male" and "female" styles. */
@@ -10,9 +11,11 @@ function ChooseStyle ({ chara, value, onClick }) {
       value={value}
       onChange={evt => onClick(evt.target.value)}
     >
-      {Object.keys(charaset[chara]['portrait']).map((name) => (
-        <option value={name}>{name.toUpperCase()}</option>
-      ))}
+      {chara in charaset &&
+        Object.keys(faces[chara]).map((name) => (
+          <option value={name}>{name.toUpperCase()}</option>
+        ))
+      }
     </select>
   )
 }

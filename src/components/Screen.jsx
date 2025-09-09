@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 function Screen ({ path, children }) {
   // Emulate subpages as screens of the menu
   const [ currentPath, setCurrentPath ] = useState(window.location.pathname);
+  const basename = import.meta.env.DEV ? '' : 'adventure-party-manager/';
 
   useEffect(() => {
     const onChange = () => {
@@ -15,7 +16,7 @@ function Screen ({ path, children }) {
   }, [])
 
   return (
-    window.location.pathname === path ? children : null
+    window.location.pathname === basename + path ? children : null
   )
 }
 

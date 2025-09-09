@@ -1,12 +1,16 @@
 import React from 'react';
 
+import avatars from '../assets/avatars';
 import charaset from '../assets/charaset';
+import faces from '../assets/faces';
 
 function Portrait ({ classname, gender }) {
+  const image = faces[classname][gender];
+
   return (
-    <img
-      style={{width: '100%', margin: '1px 0'}}
-      src={charaset[classname]['portrait'][gender]}
+    <img className="portrait"
+      alt={classname}
+      src={image}
     />
   )
 }

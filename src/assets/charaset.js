@@ -1,18 +1,12 @@
-import warrior1 from './warrior_a.png';
-import warrior2 from './warrior_b.png';
-import magician1 from './magician_a.png';
-import magician2 from './magician_b.png';
-import healer1 from './healer_a.png';
-import healer2 from './healer_b.png';
-import ninja1 from './ninja_a.png';
-import ninja2 from './ninja_b.png';
-import ranger1 from './ranger_a.png';
-import ranger2 from './ranger_b.png';
-import monk1 from './monk_a.png';
-import monk2 from './monk_b.png';
+import warrior1 from './warrior_a_face_update.png';
+import magician1 from './magician_a_face_update.png';
+import healer1 from './healer_a_face_update.png';
+import ninja1 from './ninja_a_face_update.png';
+import ranger1 from './ranger_a_face_update.png';
+import monk1 from './monk_a_face_update.png';
 
 const warrior = {
-    portrait: { 'a': warrior1, 'b': warrior2 },
+    portrait: warrior1,
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -23,7 +17,7 @@ const warrior = {
 }
 
 const magician = {
-    portrait: { 'a': magician1, 'b': magician2 },
+    portrait: magician1,
     stats: {
         'Acc': 3,
         'Vig': 1,
@@ -34,7 +28,7 @@ const magician = {
 }
 
 const healer = {
-    portrait: { 'a': healer1, 'b': healer2 },
+    portrait: healer1,
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -45,7 +39,7 @@ const healer = {
 }
 
 const ninja = {
-    portrait: { 'a': ninja1, 'b': ninja2 },
+    portrait: ninja1,
     stats: {
         'Acc': 4,
         'Vig': 2,
@@ -56,7 +50,7 @@ const ninja = {
 }
 
 const ranger = {
-    portrait: { 'a': ranger1, 'b': ranger2 },
+    portrait: ranger1,
     stats: {
         'Acc': 2,
         'Vig': 3,
@@ -67,7 +61,7 @@ const ranger = {
 }
 
 const monk = {
-    portrait: { 'a': monk1, 'b': monk2 },
+    portrait: monk1,
     stats: {
         'Acc': 2,
         'Vig': 5,
