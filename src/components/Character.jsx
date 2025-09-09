@@ -1,32 +1,21 @@
 import React from 'react';
 import Portrait from './Portrait.jsx';
 
-import avatars from '../assets/avatars';
 import charaset from '../assets/charaset';
-import faces from '../assets/faces';
 
-function Character ({ char }) {
-  const image = faces[char.classname][char.gender]
-  const stats = charaset[char.classname].stats;
-  const defense = charaset[char.classname].stats['Def'];
-  const hitpoints = 20 + (defense * 6 / 2);
-  
+function Character ({ chara, name, variant }) {
+  //
   return (
     <div>
-      <Portrait charaset={char.classname} variant={char.gender} />
+      <Portrait className={`${chara} ${variant}`} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <div>{char.name1 ? char.name1 : '...'}</div>
-        <div>{char.classname}</div>
+        <div>{name ? name : '...'}</div>
+        <div>{chara.charAt(0).toUpperCase() + chara.slice(1)}</div>
         <div>Lv. 1</div>
       </div>
       <div style={{float: 'right'}}>
-        <div>{hitpoints}</div>
-        {Object.keys(stats).map((name, x) => (
-          <>
-            <strong>{name}: </strong>
-            <span style={{marginRight: '1em'}}>{stats[name]}</span>
-          </>
-        ))}
+        <div>HP: 20/ 20</div>
+        <div>MP: 10/ 10</div>
       </div>
     </div>
   )

@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'react-bootstrap/Image';
+import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import Ally from './Ally.jsx';
-
-import avatars from '../../assets/avatars';
 
 function Enemies ({ chars }) {
   return (

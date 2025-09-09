@@ -16,8 +16,8 @@ function Enemies ({ enemyList }) {
 
   return (
     <div className="enemy-box">
-      {targetlist.map((image) => (
-        <div className="enemy">
+      {targetlist.map((image, x) => (
+        <div className="enemy" key={x}>
           <img alt="enemy" src={image} />
         </div>
       ))}

@@ -4,32 +4,35 @@ import ChooseStyle from './ChooseStyle.jsx';
 import Sprite from './Sprite.jsx';
 
 function CharaEdit ({ char, onDelete, onEdit }) {
-  const [ classname, setClassname ] = useState(char.classname);
-  const [ gender, setGender ] = useState(char.gender);
-  const [ name1, setName1 ] = useState(char.name1);
+  const [ charaset, setCharaset ] = useState(char.charaset);
+  const [ variant, setVariant ] = useState(char.variant);
+  const [ firstname, setFirstname ] = useState(char.firstname);
 
   // Update callback if anything has changed
   useEffect(() => {
     onEdit({
       ...char,
-      classname: classname,
-      gender: gender,
-      name1: name1
+      charaset: charaset,
+      variant: variant,
+      firstname: firstname
     });
-  }, [classname, gender, name1])
+  }, [charaset, variant, firstname])
 
   return (
     <div className="chara-edit">
       <div>
-        <ChooseClass value={classname} onClick={setClassname} />
-        <ChooseStyle chara={classname} value={gender} onClick={setGender} />
-        <Sprite charaset={classname} direct="west" variant={gender} />
+        <ChooseClass value={charaset} onClick={setCharaset} />
+        <ChooseStyle chara={charaset} value={variant} onClick={setVariant} />
+        <Sprite
+          className={`${charaset} ${variant}`}
+          dir="west"
+        />
         <input
           style={{width: '100%', margin: '1px 0'}}
           type="text"
-          value={name1}
+          value={firstname}
           placeholder="Name"
-          onChange={evt => setName1(evt.target.value)}
+          onChange={evt => setFirstname(evt.target.value)}
         />
         <input
           style={{width: '100%', margin: '1px 0'}}

@@ -10,8 +10,8 @@ function NavBar({ links, onClick }) {
       <Container>
         <Navbar.Brand>Anti Fantasy</Navbar.Brand>
         <Nav className="me-auto">
-          {links.map((name) => (
-            <NavLink path={name} onClick={onClick} />
+          {links.map((name, x) => (
+            <NavLink key={x} path={name} onClick={onClick} />
           ))}
         </Nav>
       </Container>

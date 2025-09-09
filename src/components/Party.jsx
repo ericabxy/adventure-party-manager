@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ListGroup from 'react-bootstrap/ListGroup';
-import './party.css';
 
-import AddChar from './AddChar';
 import Button from './Button';
 import CharaAdd from './CharaAdd';
 import CharaEdit from './CharaEdit';
@@ -13,17 +11,25 @@ import charaset from '../assets/charaset';
 function Party () {
   const [ chars, setChars ] = useState([]);
   const charData = JSON.parse(localStorage.getItem('saveData'));
+  const charasets = [
+    'warrior',
+    'magician',
+    'healer',
+    'ninja',
+    'ranger',
+    'monk'
+  ]
+  const variants = [
+    'masc',
+    'femme'
+  ]
   
   const addChar = () => {
-    const charas = Object.keys(charaset);
-    const classname = charas[chars.length % charas.length];
-    const variants = [ 'a', 'b' ];
-    const gender = variants[chars.length % variants.length];
     const newChar = {
       id: uuidv4(),
-      classname: classname,
-      gender: gender,
-      name1: '',
+      charaset: charasets[chars.length % charasets.length],
+      variant: variants[chars.length % variants.length],
+      firstname: '',
     };
     setChars([...chars, newChar]);
     localStorage.setItem('saveData', JSON.stringify([...chars, newChar]));
@@ -62,6 +68,7 @@ function Party () {
       <div className="chara-list">
         {chars.map((char, x) => (
           <CharaEdit
+            key={x}
             id={char.id}
             char={char}
             onDelete={delChar}
@@ -70,16 +77,7 @@ function Party () {
         ))}
         {chars.length < 4 &&
           <CharaAdd
-            id='99'
-            char={{
-              id: uuidv4(),
-              classname: 'Warrior',
-              gender: 'a',
-              name1: '',
-            }}
-            onDelete={delChar}
-            onEdit={modChar}
-            onAdd={addChar}
+            onClick={addChar}
           />
         }
       </div>

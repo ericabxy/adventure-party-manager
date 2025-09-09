@@ -18,8 +18,8 @@ function Status () {
   return (
     <ListGroup>
       {chars.map((char, x) => (
-        <ListGroup.Item>
-          <Character char={char} />
+        <ListGroup.Item key={x}>
+          <Character chara={char.charaset} variant={char.variant} name={char.firstname} />
         </ListGroup.Item>
       ))}
     </ListGroup>

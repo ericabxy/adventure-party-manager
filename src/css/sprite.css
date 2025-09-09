@@ -1,0 +1,41 @@
+@import url('./charasets');
+@import url('./extraposes_attack');
+
+.sprite {
+  --width: 2em;
+  --height: 2.25em;
+  --iw: calc(var(--width) * 3);
+  --ih: calc(var(--height) * 4);
+  background-size: var(--iw) var(--ih);
+  image-rendering: pixelated;
+  width: var(--width);
+  height: var(--height);
+}
+
+.sprite.step-1 {
+  background-position-x: 0;
+}
+
+.sprite.step-2 {
+  background-position-x: calc(0em - var(--width));
+}
+
+.sprite.step-3 {
+  background-position-x: calc(0em - var(--width) * 2);
+}
+
+.sprite.north {
+  background-position-y: 0;
+}
+
+.sprite.east {
+  background-position-y: calc(0em - var(--height));
+}
+
+.sprite.south {
+  background-position-y: calc(0em - var(--height) * 2);
+}
+
+.sprite.west {
+  background-position-y: calc(0em - var(--height) * 3);
+}

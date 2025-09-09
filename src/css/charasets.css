@@ -1,0 +1,47 @@
+.sprite.warrior.masc {
+  background-image: url('../assets/warrior_a.png');
+}
+
+.sprite.magician.masc {
+  background-image: url('../assets/magician_a.png');
+}
+
+.sprite.healer.masc {
+  background-image: url('../assets/healer_a.png');
+}
+
+.sprite.ninja.masc {
+  background-image: url('../assets/ninja_a.png');
+}
+
+.sprite.ranger.masc {
+  background-image: url('../assets/ranger_a.png');
+}
+
+.sprite.monk.masc {
+  background-image: url('../assets/monk_a.png');
+}
+
+.sprite.warrior.femme {
+  background-image: url('../assets/warrior_b.png');
+}
+
+.sprite.magician.femme {
+  background-image: url('../assets/magician_b.png');
+}
+
+.sprite.healer.femme {
+  background-image: url('../assets/healer_b.png');
+}
+
+.sprite.ninja.femme {
+  background-image: url('../assets/ninja_b.png');
+}
+
+.sprite.ranger.femme {
+  background-image: url('../assets/ranger_b.png');
+}
+
+.sprite.monk.femme {
+  background-image: url('../assets/monk_b.png');
+}

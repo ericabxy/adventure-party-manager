@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
-import '../sprite.css';
+import React from 'react'
 
-function Sprite ({ charaset, direct, scale, variant }) {
-  const gender = variant == 'b' ? 'femme' : 'masc';
-  const [ step, setStep ] = useState(2);
-
+function Sprite ({ className }) {
   return (
     <div
-      className={`sprite ${charaset} ${gender} south step-2`}
+      className={`sprite ${className} south step-2`}
       style={{display: 'block', margin: '.25em auto'}}
-    >
-    </div>
+    />
   )
 }
 

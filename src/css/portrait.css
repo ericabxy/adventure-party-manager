@@ -1,0 +1,60 @@
+.portrait {
+  background-size: 72px 72px;
+  image-rendering: pixelated;
+  width: 72px;
+  height: 72px;
+}
+
+.portrait.left {
+  float: left;
+}
+
+.portrait.warrior.masc {
+  background-image: url('../assets/warrior_a_face_update.png');
+  /*background-position-x: -32px;*/
+  /*background-position-y: -72px;*/
+}
+
+.portrait.magician.masc {
+  background-image: url('../assets/magician_a_face_update.png');
+}
+
+.portrait.healer.masc {
+  background-image: url('../assets/healer_a_face_update.png');
+}
+
+.portrait.ninja.masc {
+  background-image: url('../assets/ninja_a_face_update.png');
+}
+
+.portrait.ranger.masc {
+  background-image: url('../assets/ranger_a_face_update.png');
+}
+
+.portrait.monk.masc {
+  background-image: url('../assets/monk_a_face_update.png');
+}
+
+.portrait.warrior.femme {
+  background-image: url('../assets/warrior_b_face_update.png');
+}
+
+.portrait.magician.femme {
+  background-image: url('../assets/magician_b_face_update.png');
+}
+
+.portrait.healer.femme {
+  background-image: url('../assets/healer_b_face_update.png');
+}
+
+.portrait.ninja.femme {
+  background-image: url('../assets/ninja_b_face_update.png');
+}
+
+.portrait.ranger.femme {
+  background-image: url('../assets/ranger_b_face_update.png');
+}
+
+.portrait.monk.femme {
+  background-image: url('../assets/monk_b_face_update.png');
+}

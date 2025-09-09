@@ -66,10 +66,10 @@ const monk = {
 }
 
 export default {
-  'Warrior': warrior,
-  'Magician': magician,
-  'Healer': healer,
-  'Ninja': ninja,
-  'Ranger': ranger,
-  'Monk': monk
+  'warrior': warrior,
+  'magician': magician,
+  'healer': healer,
+  'ninja': ninja,
+  'ranger': ranger,
+  'monk': monk
 }
