@@ -16,21 +16,10 @@ function App() {
     <>
       <NavBar links={['party', 'status', 'battle', 'save']} onClick={setSubpage} />
       <main>
-        <Screen path="/">
-          <Party />
-        </Screen>
-        <Screen path="/party">
-          <Party />
-        </Screen>
-        <Screen path="/status">
-          <Status />
-        </Screen>
-        <Screen path="/battle">
-          <Battle />
-        </Screen>
-        <Screen path="/save">
-          <Save />
-        </Screen>
+        {subpage === 'party' && <Party />}
+        {subpage === 'status' && <Status />}
+        {subpage === 'battle' && <Battle />}
+        {subpage === 'save' && <Save />}
       </main>
       <Footer />
     </>

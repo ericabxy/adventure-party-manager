@@ -1,16 +1,14 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 
-function NavLink ({ path }) {
-  const onClick = (evt) => {
+function NavLink ({ path, onClick }) {
+  const click = evt => {
     evt.preventDefault();
-    window.history.pushState({}, '', path)
-    window.dispatchEvent(new PopStateEvent('changescreen'))
-  };
-  const basename = import.meta.env.DEV ? '/' : '/adventure-party-manager/';
+    onClick(path);
+  }
 
   return (
-    <Nav.Link href={basename + path} onClick={onClick}>
+    <Nav.Link href={path} onClick={click}>
       {path.charAt(0).toUpperCase() + path.slice(1)}
     </Nav.Link>
   )
