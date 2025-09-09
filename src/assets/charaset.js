@@ -8,66 +8,60 @@ import monk1 from './monk_a_face_update.png';
 const warrior = {
     portrait: warrior1,
     stats: {
-        'Acc': 2,
-        'Vig': 3,
-        'Eva': 2,
         'Str': 5,
-        'Mag': 1
+        'End': 3,
+        'Mag': 1,
+        'Ref': 2,
     }
 }
 
 const magician = {
     portrait: magician1,
     stats: {
-        'Acc': 3,
-        'Vig': 1,
-        'Eva': 3,
         'Str': 1,
-        'Mag': 5
+        'End': 1,
+        'Mag': 5,
+        'Ref': 3,
     }
 }
 
 const healer = {
     portrait: healer1,
     stats: {
-        'Acc': 2,
-        'Vig': 3,
-        'Eva': 2,
         'Str': 2,
-        'Mag': 4
+        'End': 3,
+        'Mag': 4,
+        'Ref': 2,
     }
 }
 
 const ninja = {
     portrait: ninja1,
     stats: {
-        'Acc': 4,
-        'Vig': 2,
-        'Eva': 3,
         'Str': 2,
-        'Mag': 2
+        'End': 2,
+        'Mag': 2,
+        'Ref': 3,
     }
 }
 
 const ranger = {
     portrait: ranger1,
     stats: {
-        'Acc': 2,
-        'Vig': 3,
-        'Eva': 2,
         'Str': 2,
-        'Mag': 4
+        'End': 3,
+        'Mag': 4,
+        'Ref': 2,
     }
 }
 
 const monk = {
     portrait: monk1,
     stats: {
-        'Acc': 2,
-        'Vig': 5,
-        'Eva': 2,
         'Str': 2,
-        'Mag': 2
+        'End': 5,
+        'Mag': 2,
+        'Ref': 2,
     }
 }
 

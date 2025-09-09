@@ -8,8 +8,8 @@ import faces from '../assets/faces';
 function Character ({ char }) {
   const image = faces[char.classname][char.gender]
   const stats = charaset[char.classname].stats;
-  const vigor = charaset[char.classname].stats['Vig'];
-  const hitpoints = 20 + (vigor * 6 / 2);
+  const defense = charaset[char.classname].stats['Def'];
+  const hitpoints = 20 + (defense * 6 / 2);
   
   return (
     <div>

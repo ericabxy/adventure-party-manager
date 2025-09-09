@@ -8,7 +8,7 @@ function Sprite ({ charaset, direct, scale, variant }) {
   return (
     <div
       className={`sprite ${charaset} ${gender} south step-2`}
-      style={{display: 'block', margin: '1em auto'}}
+      style={{display: 'block', margin: '.25em auto'}}
     >
     </div>
   )

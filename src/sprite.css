@@ -1,6 +1,6 @@
 .sprite {
-  --width: 4em;
-  --height: 4.50em;
+  --width: 2em;
+  --height: 2.25em;
   --iw: calc(var(--width) * 3);
   --ih: calc(var(--height) * 4);
   background-size: var(--iw) var(--ih);

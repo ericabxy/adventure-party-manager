@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
 import ChooseClass from './ChooseClass.jsx';
 import ChooseStyle from './ChooseStyle.jsx';
 import Sprite from './Sprite.jsx';
 
-import avatars from '../assets/avatars';
-
-function AddChar ({ char, onDelete, onEdit }) {
+function CharaEdit ({ char, onDelete, onEdit }) {
   const [ classname, setClassname ] = useState(char.classname);
   const [ gender, setGender ] = useState(char.gender);
   const [ name1, setName1 ] = useState(char.name1);
@@ -22,16 +19,7 @@ function AddChar ({ char, onDelete, onEdit }) {
   }, [classname, gender, name1])
 
   return (
-    <div
-      style={{
-        backgroundColor: 'LightSkyBlue',
-        border: '.25em solid WhiteSmoke',
-        borderRadius: '.25em',
-        margin: '1em',
-        maxWidth: '10em',
-        padding: '.75em'
-      }}
-    >
+    <div className="chara-edit">
       <div>
         <ChooseClass value={classname} onClick={setClassname} />
         <ChooseStyle chara={classname} value={gender} onClick={setGender} />
@@ -54,4 +42,4 @@ function AddChar ({ char, onDelete, onEdit }) {
   )
 }
 
-export default AddChar;
+export default CharaEdit;
