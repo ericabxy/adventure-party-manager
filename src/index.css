@@ -9,18 +9,11 @@
   max-width: 15%;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 main {
   max-width: 600px;
   margin: 30px auto;
   overflow: auto;
-  min-height: 300px;
+  min-height: 500px;
   padding: 30px;
   border-radius: 5px;
   background-color: #ccc;
