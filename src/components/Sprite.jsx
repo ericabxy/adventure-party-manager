@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Sprite ({ children }) {
+function Sprite ({ children, dir = '' }) {
   return (
-    <div className={`sprite ${children}`} />
+    <div className={`sprite ${children} ${dir}`} />
   )
 }
 

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import ChooseClass from './ChooseClass';
-import ChooseStyle from './ChooseStyle';
-import CharaSprite from './CharaSprite';
+import React, { useEffect, useState } from 'react'
+import ChooseClass from './ChooseClass'
+import ChooseStyle from './ChooseStyle'
+import CharaSprite from './CharaSprite'
+import Sprite from './Sprite'
 
 function CharaEdit ({ char, onDelete, onEdit }) {
   const [ charaset, setCharaset ] = useState(char.charaset);
@@ -23,7 +24,9 @@ function CharaEdit ({ char, onDelete, onEdit }) {
       <ChooseClass value={charaset} onClick={setCharaset} />
       <ChooseStyle chara={charaset} value={variant} onClick={setVariant} />
       <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
-        <CharaSprite chara={char} dir="south" />
+        <Sprite>
+          {`${charaset} ${variant} west step-0`}
+        </Sprite>
       </div>
       <input
         type="text"
