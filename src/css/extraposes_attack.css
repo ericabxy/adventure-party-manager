@@ -19,6 +19,14 @@
   background-image: url('../assets/magician_b_attack.png');
 }
 
+.sprite.attack.monk.masc {
+  background-image: url('../assets/monk_a_attack.png');
+}
+
+.sprite.attack.monk.femme {
+  background-image: url('../assets/monk_b_attack.png');
+}
+
 .sprite.attack.ninja.masc {
   background-image: url('../assets/ninja_a_attack.png');
 }
@@ -27,26 +35,18 @@
   background-image: url('../assets/ninja_b_attack.png');
 }
 
-.sprite.attack.warrior.masc {
-  background-image: url('../assets/warrior_a_attack.png');
-}
-
-.sprite.attack.warrior.femme {
-  background-image: url('../assets/warrior_b_attack.png');
-}
-
 .sprite.attack.ranger.masc {
   background-image: url('../assets/ranger_a_attack.png');
-}
-
-.sprite.attack.monk.masc {
-  background-image: url('../assets/monk_a_attack.png');
 }
 
 .sprite.attack.ranger.femme {
   background-image: url('../assets/ranger_b_attack.png');
 }
 
-.sprite.attack.monk.femme {
-  background-image: url('../assets/monk_b_attack.png');
+.sprite.attack.warrior.masc {
+  background-image: url('../assets/warrior_a_attack.png');
+}
+
+.sprite.attack.warrior.femme {
+  background-image: url('../assets/warrior_b_attack.png');
 }

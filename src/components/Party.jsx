@@ -64,24 +64,22 @@ function Party () {
   }, [])
   
   return (
-    <>
-      <div className="chara-list">
-        {chars.map((char, x) => (
-          <CharaEdit
-            key={x}
-            id={char.id}
-            char={char}
-            onDelete={delChar}
-            onEdit={modChar}
-          />
-        ))}
-        {chars.length < 4 &&
-          <CharaAdd
-            onClick={addChar}
-          />
-        }
-      </div>
-    </>
+    <div className="chara-list">
+      {chars.map((char, x) => (
+        <CharaEdit
+          key={x}
+          id={char.id}
+          char={char}
+          onDelete={delChar}
+          onEdit={modChar}
+        />
+      ))}
+      {chars.length < 4 &&
+        <CharaAdd
+          onClick={addChar}
+        />
+      }
+    </div>
   )
 }
 

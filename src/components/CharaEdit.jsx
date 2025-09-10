@@ -22,18 +22,16 @@ function CharaEdit ({ char, onDelete, onEdit }) {
     <div className="chara-edit">
       <ChooseClass value={charaset} onClick={setCharaset} />
       <ChooseStyle chara={charaset} value={variant} onClick={setVariant} />
-      <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center', margin: '1px 0'}}>
+      <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
         <CharaSprite chara={char} dir="south" />
       </div>
       <input
-        style={{width: '100%', margin: '1px 0'}}
         type="text"
         value={firstname}
         placeholder="Name"
         onChange={evt => setFirstname(evt.target.value)}
       />
       <input
-        style={{width: '100%', margin: '1px 0'}}
         type="button"
         value="Delete"
         onClick={() => onDelete(char.id)}

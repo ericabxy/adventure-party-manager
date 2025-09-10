@@ -14,7 +14,6 @@ function ChooseClass ({ value, onClick }) {
 
   return (
     <select
-      style={{width: '100%'}}
       value={value}
       onChange={evt => onClick(evt.target.value)}
     >

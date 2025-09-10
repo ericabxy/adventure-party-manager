@@ -1,21 +1,37 @@
 .chara-list {
+  align-content: space-evenly;
+  background-color: LightGray;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  height: 32em; /* match container (index.css main) */
 }
 
 .chara-add {
-  margin: 1em;
+  margin: 1em 2em;
   max-width: 10em;
   padding: .75em;
   width: 100%;
 }
 
 .chara-edit {
-  background-color: LightSkyBlue;
-  border: .25em solid WhiteSmoke;
+  background-color: WhiteSmoke;
   border-radius: .25em;
-  margin: 1em;
+  color: Black;
+  margin: 1em 2em;
   max-width: 10em;
-  padding: .75em;
+  padding: 1em;
+}
+
+.chara-edit input[type="button"] {
+  margin: 1px 0;
+  width: 100%;
+}
+
+.chara-edit select, .chara-edit input[type="text"] {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  margin: 1px 0;
+  width: 100%;
 }

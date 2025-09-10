@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 
-import Battle from './components/Battle.jsx';
-import Footer from './components/Footer.jsx';
-import NavBar from './components/NavBar.jsx';
-import Party from './components/Party.jsx';
-import Save from './components/Save.jsx';
-import Screen from './components/Screen.jsx';
-import Status from './components/Status.jsx';
+import Battle from './components/Battle'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
+import Party from './components/Party'
+import Save from './components/Save'
+import Status from './components/Status'
+
+import image from './assets/warrior_b_attack.png'
 
 function App() {
   const [ subpage, setSubpage ] = useState('party');

@@ -1,3 +1,36 @@
 @import url('./css/party');
 @import url('./css/portrait');
 @import url('./css/sprite');
+
+.spinnerContainer {
+  margin: 20% auto;
+  max-width: 15%;
+}
+
+@media (max-width: 768px) {
+  .spinnerContainer {
+    margin: 250px auto 0 auto;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 425px) {
+  .spinnerContainer {
+    margin: 250px auto 0 auto;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 375px) {  
+  .spinnerContainer {
+    margin: 250px auto 0 auto;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 320px) {
+  .spinnerContainer {
+    margin: 250px auto 0 auto;
+    max-width: 50%;
+  }
+}
