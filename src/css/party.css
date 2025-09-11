@@ -1,37 +1,34 @@
-.chara-list {
+@import url('./gameconsole');
+
+.party-list {
   align-content: space-evenly;
   background-color: LightGray;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   height: 32em; /* match container (index.css main) */
+  justify-content: space-evenly;
+  padding: 2em;
 }
 
-.chara-add {
+.party-add {
   margin: 1em 2em;
   max-width: 10em;
   padding: .75em;
   width: 100%;
 }
 
-.chara-edit {
+.party-edit {
   background-color: WhiteSmoke;
   border-radius: .25em;
   color: Black;
-  margin: 1em 2em;
+  margin: 1em;
   max-width: 10em;
   padding: 1em;
 }
 
-.chara-edit input[type="button"] {
-  margin: 1px 0;
-  width: 100%;
-}
-
-.chara-edit select, .chara-edit input[type="text"] {
-  background-color: inherit;
-  border: none;
-  color: inherit;
-  margin: 1px 0;
-  width: 100%;
+.party-portrait {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
 }

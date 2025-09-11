@@ -1,0 +1,41 @@
+.party-list.nes {
+  background-color: Black;
+}
+
+.party-edit.nes {
+  background-color: LightSkyBlue;
+  border: .33em ridge LightGray;
+  color: Black;
+  padding: .67em;
+}
+
+.party-edit.nes input[type="button"] {
+  background-color: LightGray;
+  border: 1px outset Black;
+  border-radius: .25em;
+  color: Black;
+}
+
+.party-edit.nes input[type="text"] {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+}
+
+.party-edit.nes input[type="text"]:focus {
+  outline: none;
+}
+
+.party-edit.nes select option {
+  background-color: inherit;
+  color: inherit;
+}
+
+.party-edit.nes select option:focus {
+  background-color: Red;
+  color: Black;
+}
+
+.party-edit.nes select:focus {
+  outline: none;
+}

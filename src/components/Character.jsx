@@ -9,7 +9,7 @@ function Character ({ chara, name, variant }) {
     <div>
       <Portrait className={`${chara} ${variant}`} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <div>{name ? name : '...'}</div>
+        <div>{name ? name : '?'}</div>
         <div>{chara.charAt(0).toUpperCase() + chara.slice(1)}</div>
         <div>Lv. 1</div>
       </div>

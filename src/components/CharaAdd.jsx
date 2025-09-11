@@ -5,7 +5,7 @@ import Sprite from './Sprite.jsx';
 
 function CharaAdd ({ onClick }) {
   return (
-    <div className="chara-add">
+    <div className="party-add">
       <input
         style={{width: '100%', margin: '1px 0'}}
         type="button"

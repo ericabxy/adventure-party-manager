@@ -20,12 +20,11 @@ function CharaEdit ({ char, onDelete, onEdit }) {
   }, [charaset, variant, firstname])
 
   return (
-    <div className="chara-edit">
+    <div className="party-edit nes">
       <ChooseClass value={charaset} onClick={setCharaset} />
-      <ChooseStyle chara={charaset} value={variant} onClick={setVariant} />
-      <div style={{alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
+      <div className="party-portrait">
         <Sprite>
-          {`${charaset} ${variant} west step-0`}
+          {`${charaset} ${variant} attack west step-0`}
         </Sprite>
       </div>
       <input

@@ -64,7 +64,7 @@ function Party () {
   }, [])
   
   return (
-    <div className="chara-list">
+    <div className="party-list nes">
       {chars.map((char, x) => (
         <CharaEdit
           key={x}
