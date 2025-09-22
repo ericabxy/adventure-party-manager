@@ -1,0 +1,23 @@
+.sprite.monk.masc {
+  background-image: url('../assets/monk_a.png');
+}
+
+.sprite.berzerk.masc {
+  background-image: url('../assets/berzerk_a.png');
+}
+
+.sprite.darkknight.masc {
+  background-image: url('../assets/d.knight_a.png');
+}
+
+.sprite.monk.femme {
+  background-image: url('../assets/monk_b.png');
+}
+
+.sprite.berzerk.femme {
+  background-image: url('../assets/berzerk_b.png');
+}
+
+.sprite.darkknight.femme {
+  background-image: url('../assets/d.knight_b.png');
+}

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
+import React, { useEffect, useState } from 'react'
 
-import Character from './Character.jsx';
+import Header from './status/Header'
+import Experience from './status/Experience'
+import Stats from './status/Stats'
 
 function Status () {
   const [ chars, setChars ] = useState([]);
@@ -16,14 +17,12 @@ function Status () {
   }, [])
 
   return (
-    <ListGroup>
-      {chars.map((char, x) => (
-        <ListGroup.Item key={x}>
-          <Character chara={char.charaset} variant={char.variant} name={char.firstname} />
-        </ListGroup.Item>
-      ))}
-    </ListGroup>
+    <>
+      <Header chara={{classname: 'Warrior', firstname: 'Jude', explevel: 1}} />
+      <Experience />
+      <Stats />
+    </>
   )
 }
 
-export default Status;
+export default Status

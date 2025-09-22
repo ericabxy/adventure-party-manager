@@ -18,10 +18,6 @@
   background-image: url('../assets/ranger_a.png');
 }
 
-.sprite.monk.masc {
-  background-image: url('../assets/monk_a.png');
-}
-
 .sprite.warrior.femme {
   background-image: url('../assets/warrior_b.png');
 }
@@ -40,8 +36,4 @@
 
 .sprite.ranger.femme {
   background-image: url('../assets/ranger_b.png');
-}
-
-.sprite.monk.femme {
-  background-image: url('../assets/monk_b.png');
 }

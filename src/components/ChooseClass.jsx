@@ -10,11 +10,6 @@ function ChooseClass ({ value, onClick }) {
     'ninja',
     'ranger',
     'monk',
-    'berzerker',
-    'd.knight',
-    'samurai',
-    'bard',
-    'dancer'
   ];
 
   return (

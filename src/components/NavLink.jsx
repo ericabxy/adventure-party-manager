@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 
-function NavLink ({ path, onClick }) {
+function NavLink ({ children, path, onClick }) {
   const click = evt => {
     evt.preventDefault();
     onClick(path);
@@ -9,7 +9,7 @@ function NavLink ({ path, onClick }) {
 
   return (
     <Nav.Link href={path} onClick={click}>
-      {path.charAt(0).toUpperCase() + path.slice(1)}
+      {children}
     </Nav.Link>
   )
 }

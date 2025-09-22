@@ -1,13 +1,9 @@
-@import url('./gameconsole');
-
 .party-list {
   align-content: space-evenly;
-  background-color: LightGray;
   display: flex;
   flex-wrap: wrap;
   height: 32em; /* match container (index.css main) */
   justify-content: space-evenly;
-  padding: 2em;
 }
 
 .party-add {
@@ -21,9 +17,15 @@
   background-color: WhiteSmoke;
   border-radius: .25em;
   color: Black;
-  margin: 1em;
+  margin: 1em 2em;
   max-width: 10em;
   padding: 1em;
+}
+
+.party-edit input[type="text"], .party-edit input[type="text"]:focus {
+  background-color: inherit;
+  border: none;
+  outline: none;
 }
 
 .party-portrait {

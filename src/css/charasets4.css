@@ -1,0 +1,15 @@
+.sprite.samurai.masc {
+  background-image: url('../assets/samurai_a.png');
+}
+
+.sprite.bard.masc {
+  background-image: url('../assets/bard_a.png');
+}
+
+.sprite.samurai.femme {
+  background-image: url('../assets/samurai_b.png');
+}
+
+.sprite.dancer.femme {
+  background-image: url('../assets/dancer_b.png');
+}

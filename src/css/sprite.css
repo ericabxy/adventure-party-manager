@@ -1,4 +1,6 @@
-@import url('./charasets');
+@import url('./charasets1');
+@import url('./charasets2');
+@import url('./charasets4');
 @import url('./extraposes_attack');
 
 .sprite {
