@@ -15,13 +15,12 @@ function NavBar({ onClick }) {
       <Container>
         <Navbar.Brand>Anti Fantasy</Navbar.Brand>
         <Nav className="me-auto">
-          <NavLink path="party" onClick={onClick}>Party</NavLink>
-          <Navbar.Text>|</Navbar.Text>
-          <NavLink path="main" onClick={onClick}>Main</NavLink>
           <NavLink path="item" onClick={onClick}>Item</NavLink>
           <NavLink path="magic" onClick={onClick}>Magic</NavLink>
           <NavLink path="equip" onClick={onClick}>Equip</NavLink>
           <NavLink path="status" onClick={onClick}>Status</NavLink>
+          <NavLink path="order" onClick={onClick}>Order</NavLink>
+          <NavLink path="change" onClick={onClick}>Change</NavLink>
           <NavLink path="config" onClick={onClick}>Config</NavLink>
           <NavLink path="save" onClick={onClick}>Save</NavLink>
           <Navbar.Text>|</Navbar.Text>

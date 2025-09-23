@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ChooseClass from './ChooseClass'
 import ChooseStyle from './ChooseStyle'
-import CharaSprite from './CharaSprite'
-import Sprite from './Sprite'
+import Sprite from '../Sprite'
 
-function CharaEdit ({ char, onDelete, onEdit }) {
+function Character ({ char, onDelete, onEdit }) {
   const [ charaset, setCharaset ] = useState(char.charaset);
   const [ variant, setVariant ] = useState(char.variant);
   const [ firstname, setFirstname ] = useState(char.firstname);
@@ -42,4 +41,4 @@ function CharaEdit ({ char, onDelete, onEdit }) {
   )
 }
 
-export default CharaEdit;
+export default Character

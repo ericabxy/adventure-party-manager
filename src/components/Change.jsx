@@ -3,12 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import Button from './Button';
-import CharaAdd from './CharaAdd';
-import CharaEdit from './CharaEdit';
+import CharaAdd from './change/CharaAdd';
+import Character from './change/Character';
 
 import charaset from '../assets/charaset';
 
-function Party () {
+function Change () {
   const [ chars, setChars ] = useState([]);
   const charData = JSON.parse(localStorage.getItem('saveData'));
   const charasets = [
@@ -66,7 +66,7 @@ function Party () {
   return (
     <div className="party-list">
       {chars.map((char, x) => (
-        <CharaEdit
+        <Character
           key={x}
           id={char.id}
           char={char}
@@ -83,4 +83,4 @@ function Party () {
   )
 }
 
-export default Party;
+export default Change;

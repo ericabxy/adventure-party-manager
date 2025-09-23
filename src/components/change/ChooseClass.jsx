@@ -1,7 +1,5 @@
 import React from 'react';
 
-import charaset from '../assets/charaset';
-
 function ChooseClass ({ value, onClick }) {
   const choices = [
     'warrior',

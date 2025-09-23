@@ -1,14 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import Button from './Button';
-import NavBar from './NavBar';
-
-function Header ({ children }) {
+function Header ({ children, title }) {
   return (
-    <header className="header">
-      {children}
+    <header className="App-header">
+      <h3>{title}</h3>
+      <p>{children}</p>
     </header>
   )
 }
 
-export default Header;
+export default Header

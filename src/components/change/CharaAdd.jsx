@@ -1,7 +1,7 @@
-import React from 'react';
-import ChooseClass from './ChooseClass.jsx';
-import ChooseStyle from './ChooseStyle.jsx';
-import Sprite from './Sprite.jsx';
+import React from 'react'
+import ChooseClass from './ChooseClass'
+import ChooseStyle from './ChooseStyle'
+import Sprite from '../Sprite'
 
 function CharaAdd ({ onClick }) {
   return (
