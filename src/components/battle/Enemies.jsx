@@ -16,11 +16,11 @@ function Enemies ({ enemyList }) {
   ]
 
   return (
-    <Card bg="dark" text="light">
-      <Card.Header>Battlefield</Card.Header>
+    <Card bg="dark" border="light" text="light">
+      <Card.Header>Enemies</Card.Header>
       <Card.Body>
         {targetlist.map((image, x) => (
-          <Image src={image} />
+          <Image key={x} src={image} />
         ))}
       </Card.Body>
     </Card>

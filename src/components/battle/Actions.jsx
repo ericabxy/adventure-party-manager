@@ -3,14 +3,25 @@ import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 function Actions ({ children }) {
+  const actionList = [
+    'Fight',
+    'Magic',
+    'Drink',
+    'Item',
+    'Run'
+  ];
+
   return (
     <Card>
       <ListGroup variant="flush">
-        <ListGroup.Item>Fight</ListGroup.Item>
-        <ListGroup.Item>Magic</ListGroup.Item>
-        <ListGroup.Item>Drink</ListGroup.Item>
-        <ListGroup.Item>Item</ListGroup.Item>
-        <ListGroup.Item>Run</ListGroup.Item>
+        {actionList.map((name, x) => (
+          <ListGroup.Item
+            key={name.toLowerCase()}
+            variant="dark"
+          >
+            {name}
+          </ListGroup.Item>
+        ))}
       </ListGroup>
     </Card>
   )

@@ -4,12 +4,14 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import Actions from './battle/Actions'
+import Battlefield from './battle/Battlefield'
 import EnemyNames from './battle/EnemyNames'
 import Enemies from './battle/Enemies'
 import Party from './battle/Party'
 import PartyHp from './battle/PartyHp'
 
 function Battle ({  }) {
+  // Battle I lays out the battlefield using React Bootstrap components
   const [ chars, setChars ] = useState([]);
   const charData = JSON.parse(localStorage.getItem('saveData'));
 
@@ -30,17 +32,10 @@ function Battle ({  }) {
   ];
 
   return (
-    <Container>
+    <Container style={{backgroundColor: 'black', borderRadius: '5px', padding: '2px'}}>
       <Row>
         <Col>
-          <Row>
-            <Col>
-              <Enemies />
-            </Col>
-            <Col xs={3}>
-              <Party charas={chars} />
-            </Col>
-          </Row>
+          <Battlefield />
           <Row>
             <Col>
               <EnemyNames enemies={enemies} />

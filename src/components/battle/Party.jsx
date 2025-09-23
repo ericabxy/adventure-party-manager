@@ -6,12 +6,12 @@ import Sprite from './Sprite'
 
 function Party ({ charas }) {
   return (
-    <Card bg="dark" text="light">
+    <Card bg="dark" border="light" text="light">
       <Card.Header>Party</Card.Header>
       <Card.Body>
         <ListGroup>
           {charas.map((chara, x) => (
-            <Sprite dir="west">warrior femme</Sprite>
+            <Sprite key={x} dir="west">warrior femme</Sprite>
           ))}
         </ListGroup>
       </Card.Body>

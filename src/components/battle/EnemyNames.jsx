@@ -7,7 +7,7 @@ function EnemyNames ({ enemies }) {
     <Card>
       <ListGroup variant="flush">
         {enemies.map((enemy, x) => (
-          <ListGroup.Item>
+          <ListGroup.Item key={x} variant="dark">
             {enemy.firstname}
           </ListGroup.Item>
         ))}
