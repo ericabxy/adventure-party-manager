@@ -1,26 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import Character from './Character'
+import Character from './order/Character'
+import Portrait from './order/Portrait'
+import Swap from './order/Swap'
 
 function Order () {
   // Change the display position of characters
-  const [ chars, setChars ] = useState([]);
-  const charData = JSON.parse(localStorage.getItem('saveData'));
+  const [ charas, setCharas ] = useState([]);
+  const charaData = JSON.parse(localStorage.getItem('saveData'));
 
   useEffect(() => {
-    if (charData == null) {
-      setChars([]);
+    if (charaData == null) {
+      setCharas([]);
     } else {
-      setChars(charData);
+      setCharas(charaData);
     }
   }, [])
+  
+  const doSwap = (src, dest) => {
+    const swap = charaData[dest];
+    charaData[dest] = charaData[src];
+    charaData[src] = swap;
+    localStorage.setItem('saveData', JSON.stringify(charaData));
+    setCharas(charaData);
+  };
 
   return (
     <ListGroup>
-      {chars.map((char, x) => (
+      {charas.map((char, x) => (
         <ListGroup.Item key={x}>
-          <Character chara={char.charaset} variant={char.variant} name={char.firstname} />
+          <Swap choices={charas} position={x} onChange={doSwap} />
         </ListGroup.Item>
       ))}
     </ListGroup>

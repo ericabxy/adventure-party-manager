@@ -1,8 +1,6 @@
 import React from 'react';
 import Portrait from './Portrait.jsx';
 
-import charaset from '../assets/charaset';
-
 function Character ({ chara, name, variant }) {
   //
   return (

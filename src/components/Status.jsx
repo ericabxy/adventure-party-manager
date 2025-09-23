@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import ListGroup from 'react-bootstrap/ListGroup'
 
-import Header from './status/Header'
-import Experience from './status/Experience'
-import Stats from './status/Stats'
+import Character from './Character'
 
 function Status () {
   const [ chars, setChars ] = useState([]);
@@ -17,11 +16,13 @@ function Status () {
   }, [])
 
   return (
-    <>
-      <Header chara={{classname: 'Warrior', firstname: 'Jude', explevel: 1}} />
-      <Experience />
-      <Stats />
-    </>
+    <ListGroup>
+      {chars.map((char, x) => (
+        <ListGroup.Item key={x}>
+          <Character chara={char.charaset} variant={char.variant} name={char.firstname} />
+        </ListGroup.Item>
+      ))}
+    </ListGroup>
   )
 }
 
