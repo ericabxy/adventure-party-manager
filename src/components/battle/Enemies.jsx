@@ -20,9 +20,7 @@ function Enemies ({ enemyList }) {
       <Card.Header>Battlefield</Card.Header>
       <Card.Body>
         {targetlist.map((image, x) => (
-          <div className="enemy" key={x}>
-            <img alt="enemy" src={image} />
-          </div>
+          <Image src={image} />
         ))}
       </Card.Body>
     </Card>
