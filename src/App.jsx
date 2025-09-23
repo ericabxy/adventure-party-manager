@@ -6,7 +6,7 @@ import Screen from './components/Screen'
 import Footer from './components/Footer'
 
 function App() {
-  const [ subpage, setSubpage ] = useState('party');
+  const [ subpage, setSubpage ] = useState('intro');
 
   return (
     <>

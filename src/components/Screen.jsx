@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Intro from './Intro'
+//
 import Item from './Item'
 import Magic from './Magic'
 import Equip from './Equip'
@@ -10,10 +12,12 @@ import Config from './Config'
 import Save from './Save'
 //
 import Battle from './Battle'
+import BattleII from './BattleII'
 
 function Screen ({ page }) {
   return (
     <main>
+      {page === 'intro' && <Intro />}
       {page === 'item' && <Item />}
       {page === 'magic' && <Magic />}
       {page === 'equip' && <Equip />}
@@ -23,6 +27,7 @@ function Screen ({ page }) {
       {page === 'config' && <Config />}
       {page === 'save' && <Save />}
       {page === 'battle' && <Battle />}
+      {page === 'battleii' && <BattleII />}
     </main>
   )
 }

@@ -24,7 +24,8 @@ function NavBar({ onClick }) {
           <NavLink path="config" onClick={onClick}>Config</NavLink>
           <NavLink path="save" onClick={onClick}>Save</NavLink>
           <Navbar.Text>|</Navbar.Text>
-          <NavLink path="battle" onClick={onClick}>Battle</NavLink>
+          <NavLink path="battle" onClick={onClick}>Battle I</NavLink>
+          <NavLink path="battleii" onClick={onClick}>Battle II</NavLink>
         </Nav>
       </Container>
     </Navbar>

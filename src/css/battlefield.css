@@ -1,0 +1,20 @@
+.battlefield {
+  align-items: flex-end;
+  background-image: url('../assets/battle-background-sunny-hillsx1.png');
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  image-rendering: pixelated;
+  width: 34em;
+  height: 22em;
+}
+
+.battlewindow {
+  background-image: url('../assets/HUD.png');
+  background-size: 100% 100%;
+  color: White;
+  display: flex;
+  image-rendering: pixelated;
+  padding: .5em 1em;
+  width: 34em;
+}
