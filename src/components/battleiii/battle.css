@@ -10,6 +10,7 @@
 .enemies-box {
   align-content: start; /* do not stretch, and collapse to start of box */
   background-color: black;
+  border: .5em ridge white;
   display: flex;
   flex-flow: column wrap; /* arrange vertically, creating new columns as needed */
   justify-content: start;

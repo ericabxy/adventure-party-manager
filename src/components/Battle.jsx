@@ -19,10 +19,10 @@ function Battle ({  }) {
   const charData = JSON.parse(localStorage.getItem('saveData'));
   const dark = 'bg-dark border-light text-light';
   const light = 'bg-light';
-  const outerlight = 'p-1 rounded-3 ';
+  const outerlight = 'bg-light p-1 rounded-3';
   const outerdark = 'bg-dark p-1 rounded-3 text-light';
-  const [ theme, setTheme ] = useState(dark);
-  const [ outer, setOuter ] = useState(outerdark);
+  const [ theme, setTheme ] = useState(light);
+  const [ outer, setOuter ] = useState(outerlight);
   const [ isDark, setIsDark ] = useState(true);
   
   const toggle = () => {
@@ -52,26 +52,17 @@ function Battle ({  }) {
   ];
 
   return (
-    <>
-      <Form.Switch
-        checked={theme === dark}
-        onChange={toggle}
-        id="toggle-theme"
-      />
-      <Container className={outer}>
-        <Row>
-          <Col>
-            <Battlefield theme={theme} />
-            <Information theme={theme} />
-          </Col>
-          <Col xs={3}>
-            <Col>
-              <PartyHp charas={chars} theme={theme} />
-            </Col>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container className={outer}>
+      <Row>
+        <Col>
+          <Battlefield theme={theme} />
+          <Information theme={theme} />
+        </Col>
+        <Col xs={3}>
+          <PartyHp charas={chars} theme={theme} />
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

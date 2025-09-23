@@ -3,10 +3,10 @@ import Card from 'react-bootstrap/Card'
 
 function CharacterHp ({ charaname, stats, theme }) {
   return (
-    <Card className={theme}>
+    <Card className={`chara-hp-box ${theme}`}>
       <Card.Body>
         <Card.Title>{charaname ? charaname : '????'}</Card.Title>
-        <Card.Body><strong>HP:</strong> {stats.hitpoints}</Card.Body>
+        <Card.Text>HP: {stats.hitpoints}</Card.Text>
       </Card.Body>
     </Card>
   )
