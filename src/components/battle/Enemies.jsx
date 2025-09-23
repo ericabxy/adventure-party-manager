@@ -5,7 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 
 import skeleton1 from '../../assets/skeleton_1.png'
 
-function Enemies ({ enemyList }) {
+function Enemies ({ enemyList, theme }) {
   const targetlist = [
     skeleton1,
     skeleton1,
@@ -15,7 +15,7 @@ function Enemies ({ enemyList }) {
   ]
 
   return (
-    <Card bg="dark" border="light" text="light">
+    <Card className={theme}>
       <Card.Header>Enemies</Card.Header>
       <Card.Body>
         {targetlist.map((image, x) => (

@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-function Actions ({ children }) {
+function Actions ({ theme }) {
   const actionList = [
     'Fight',
     'Magic',
@@ -16,8 +16,8 @@ function Actions ({ children }) {
       <ListGroup variant="flush">
         {actionList.map((name, x) => (
           <ListGroup.Item
+            className={theme}
             key={name.toLowerCase()}
-            variant="dark"
           >
             {name}
           </ListGroup.Item>

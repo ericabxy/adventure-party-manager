@@ -5,10 +5,11 @@ import Col from 'react-bootstrap/Col'
 import Enemies from './Enemies'
 import Party from './Party'
 
-function Battlefield ({ children }) {
+function Battlefield ({ theme }) {
   // Left and right sides of the battlefield
   const [ charas, setCharas ] = useState([]);
   const charaData = JSON.parse(localStorage.getItem('saveData'));
+  const dark = 'bg-dark border-light text-light'
 
   useEffect(() => {
     if (charaData == null) {
@@ -21,10 +22,10 @@ function Battlefield ({ children }) {
   return (
     <Row>
       <Col>
-        <Enemies />
+        <Enemies theme={theme} />
       </Col>
       <Col xs={3}>
-        <Party charas={charas} />
+        <Party theme={theme} charas={charas} />
       </Col>
     </Row>
   )

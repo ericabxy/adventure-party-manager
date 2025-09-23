@@ -2,11 +2,16 @@ import React from 'react'
 
 import CharacterHp from './CharacterHp'
 
-function PartyHp ({ charas }) {
+function PartyHp ({ charas, theme }) {
   return (
     <>
       {charas.map((chara, x) => (
-        <CharacterHp key={x} charaname={chara.firstname} stats={{hitpoints: 25}} />
+        <CharacterHp
+          key={x}
+          charaname={chara.firstname}
+          stats={{hitpoints: 25}}
+          theme={theme}
+        />
       ))}
     </>
   )
