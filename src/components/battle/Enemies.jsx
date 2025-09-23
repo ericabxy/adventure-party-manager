@@ -4,7 +4,6 @@ import Image from 'react-bootstrap/Image'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 import skeleton1 from '../../assets/skeleton_1.png'
-import './battle.css'
 
 function Enemies ({ enemyList }) {
   const targetlist = [

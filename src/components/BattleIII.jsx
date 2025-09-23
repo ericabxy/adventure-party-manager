@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
-import AllyStatus from './battle/AllyStatus'
-import Enemies from './battle/Enemies'
+import AllyStatus from './battleiii/AllyStatus'
+import Enemies from './battleiii/Enemies'
 import Sprite from './Sprite'
 
 function BattleIII ({  }) {

@@ -13,6 +13,7 @@ import Save from './Save'
 //
 import Battle from './Battle'
 import BattleII from './BattleII'
+import BattleIII from './BattleIII'
 
 function Screen ({ page }) {
   return (
@@ -28,6 +29,7 @@ function Screen ({ page }) {
       {page === 'save' && <Save />}
       {page === 'battle' && <Battle />}
       {page === 'battleii' && <BattleII />}
+      {page === 'battleiii' && <BattleIII />}
     </main>
   )
 }
