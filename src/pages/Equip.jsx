@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 
-import Character from './equip/Character'
+import EquipCharacter from './EquipCharacter'
 
 function Equip (props) {
   const [ chars, setChars ] = useState([]);
@@ -20,7 +20,7 @@ function Equip (props) {
       <h3>Equip</h3>
       <Container>
         {chars.map((char, x) => (
-          <Character key={x} name={char.firstname} />
+          <EquipCharacter key={x} name={char.firstname} />
         ))}
       </Container>
     </>

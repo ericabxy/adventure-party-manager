@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Slot from './Slot'
+import EquipSlot from './EquipSlot'
 
 function Character ({ name }) {
   const hand = [
@@ -19,10 +19,10 @@ function Character ({ name }) {
   return (
     <div className="input-group mb-3">
       <span className="input-group-text">{name}</span>
-      <Slot key="rhand" choices={hand}>RHand</Slot>
-      <Slot key="lhand" choices={hand}>LHand</Slot>
-      <Slot key="head" choices={head}>Head</Slot>
-      <Slot key="body" choices={body}>Body</Slot>
+      <EquipSlot key="rhand" choices={hand}>RHand</EquipSlot>
+      <EquipSlot key="lhand" choices={hand}>LHand</EquipSlot>
+      <EquipSlot key="head" choices={head}>Head</EquipSlot>
+      <EquipSlot key="body" choices={body}>Body</EquipSlot>
     </div>
   )
 }

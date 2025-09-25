@@ -1,11 +1,11 @@
 import React from 'react'
-import MaxPartySize from './config/MaxPartySize'
+import ConfigMaxPartySize from './ConfigMaxPartySize'
 
 function Config (props) {
   return (
     <>
       <h3>Configuration</h3>
-      <MaxPartySize />
+      <ConfigMaxPartySize />
     </>
   )
 }

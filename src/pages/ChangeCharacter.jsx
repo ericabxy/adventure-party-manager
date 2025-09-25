@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import ChooseClass from './ChooseClass'
-import ChooseStyle from './ChooseStyle'
-import Sprite from '../Sprite'
+import ChangeCharaset from './ChangeCharaset'
+import ChangeVariant from './ChangeVariant'
+import Sprite from '../components/Sprite'
 
-function Character ({ char, onDelete, onEdit }) {
+function ChangeCharacter ({ char, onDelete, onEdit }) {
   const [ charaset, setCharaset ] = useState(char.charaset);
   const [ variant, setVariant ] = useState(char.variant);
   const [ firstname, setFirstname ] = useState(char.firstname);
@@ -20,7 +20,7 @@ function Character ({ char, onDelete, onEdit }) {
 
   return (
     <div className="party-edit">
-      <ChooseClass value={charaset} onClick={setCharaset} />
+      <ChangeCharaset value={charaset} onClick={setCharaset} />
       <div className="party-portrait">
         <Sprite>
           {`${charaset} ${variant} west step-0`}
@@ -41,4 +41,4 @@ function Character ({ char, onDelete, onEdit }) {
   )
 }
 
-export default Character
+export default ChangeCharacter

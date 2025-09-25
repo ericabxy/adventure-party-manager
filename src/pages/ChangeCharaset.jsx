@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChooseClass ({ value, onClick }) {
+function ChangeCharaset ({ value, onClick }) {
   const choices = [
     'warrior',
     'magician',
@@ -24,4 +24,4 @@ function ChooseClass ({ value, onClick }) {
   )
 }
 
-export default ChooseClass;
+export default ChangeCharaset

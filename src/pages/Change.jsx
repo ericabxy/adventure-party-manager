@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import ListGroup from 'react-bootstrap/ListGroup';
+import React, { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import ListGroup from 'react-bootstrap/ListGroup'
 
-import Button from './Button';
-import CharaAdd from './change/CharaAdd';
-import Character from './change/Character';
+import Button from '../components/Button'
+import ChangeCreate from './ChangeCreate'
+import ChangeCharacter from './ChangeCharacter'
 
-import charaset from '../assets/charaset';
+import charaset from '../assets/charaset'
 
 function Change () {
   const [ chars, setChars ] = useState([]);
@@ -66,7 +66,7 @@ function Change () {
   return (
     <div className="party-list">
       {chars.map((char, x) => (
-        <Character
+        <ChangeCharacter
           key={x}
           id={char.id}
           char={char}
@@ -75,7 +75,7 @@ function Change () {
         />
       ))}
       {chars.length < 4 &&
-        <CharaAdd
+        <ChangeCreate
           onClick={addChar}
         />
       }
@@ -83,4 +83,4 @@ function Change () {
   )
 }
 
-export default Change;
+export default Change

@@ -1,7 +1,7 @@
 import React from 'react'
-import Radio from './Radio'
+import Radio from '../components/Radio'
 
-function MaxPartySize (props) {
+function ConfigMaxPartySize (props) {
   return (
     <fieldset className="input-group">
       <span className="input-group-text">Maximum Party Size</span>
@@ -14,4 +14,4 @@ function MaxPartySize (props) {
   )
 }
 
-export default MaxPartySize
+export default ConfigMaxPartySize

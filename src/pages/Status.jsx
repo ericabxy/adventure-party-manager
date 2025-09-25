@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import Character from './Character'
+import Character from '../components/Character'
 
 function Status () {
   const [ chars, setChars ] = useState([]);

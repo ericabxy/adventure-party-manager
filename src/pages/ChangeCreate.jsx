@@ -1,9 +1,6 @@
 import React from 'react'
-import ChooseClass from './ChooseClass'
-import ChooseStyle from './ChooseStyle'
-import Sprite from '../Sprite'
 
-function CharaAdd ({ onClick }) {
+function ChangeCreate ({ onClick }) {
   return (
     <div className="party-add">
       <input
@@ -16,4 +13,4 @@ function CharaAdd ({ onClick }) {
   )
 }
 
-export default CharaAdd;
+export default ChangeCreate

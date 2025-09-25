@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChooseStyle ({ chara, value, onClick }) {
+function ChangeVariant ({ chara, value, onClick }) {
   /* Originally "male" and "female" styles. */
   const choices = [ 'masc', 'femme' ];
 
@@ -19,4 +19,4 @@ function ChooseStyle ({ chara, value, onClick }) {
   )
 }
 
-export default ChooseStyle;
+export default ChangeVariant
