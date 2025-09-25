@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react'
 
-function Portrait ({ charaset, variant }) {
-  const [ something, setSomething ] = useState();
-  
-  useEffect(() => {
-  }, [])
-
+function Portrait ({ charaset='warrior', variant }) {
   return (
     <div
       className={`
@@ -18,4 +13,4 @@ function Portrait ({ charaset, variant }) {
   )
 }
 
-export default Portrait;
+export default Portrait

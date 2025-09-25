@@ -1,38 +1,75 @@
 import React, { useEffect, useState } from 'react'
+import Form from 'react-bootstrap/Form'
+import Image from 'react-bootstrap/Image'
 import ListGroup from 'react-bootstrap/ListGroup'
-
-import Character from './order/Character'
-import Portrait from './order/Portrait'
-import Swap from './order/Swap'
 
 function Order () {
   // Change the display position of characters
-  const [ charas, setCharas ] = useState([]);
-  const charaData = JSON.parse(localStorage.getItem('saveData'));
+  const [ characters, setCharacters ] = useState([]);
+  const data = JSON.parse(localStorage.getItem('saveData'));
+  const [ isDataLoaded, setIsDataLoaded ] = useState(false);
 
   useEffect(() => {
-    if (charaData == null) {
-      setCharas([]);
+    if (data == null) {
+      setCharacters([]);
     } else {
-      setCharas(charaData);
+      setCharacters(data);
     }
   }, [])
+
+  useEffect(() => {
+    if (isDataLoaded) {
+      localStorage.setItem('saveData', JSON.stringify(characters));      
+    } else if (characters.length > 0) {
+      setIsDataLoaded(true);
+    }
+  }, [characters])
+
+  const onChange = evt => {
+    const src = evt.target.attributes.id.value;
+    const dest = evt.target.value;
+    const neworder = characters.map((_, x) => {
+      if (x == src) {
+        return dest;
+      } else if (x == dest) {
+        return src;
+      } else {
+        return x;
+      }
+    })
+    console.log(neworder);
+    const newdata = neworder.map((x) => {
+      return characters[x];
+    })
+    console.log(newdata);
+    setCharacters([...newdata]);
+    console.log(characters);
+  }
   
-  const doSwap = (src, dest) => {
-    const swap = charaData[dest];
-    charaData[dest] = charaData[src];
-    charaData[src] = swap;
-    localStorage.setItem('saveData', JSON.stringify(charaData));
-    setCharas(charaData);
-  };
+  const options = characters.map((element, x) => (
+    <option key={element.id} value={x}>{element.firstname}</option>
+  ))
+
+  const listItems = characters.map((element, x) => {
+    return (
+      <div className="input-group" key={element.id}>
+        <div className={`portrait ${element.charaset} ${element.variant}`} />
+        <select
+          className="form-select"
+          id={x}
+          key={element.id}
+          onChange={onChange}
+          value={x}
+        >
+          {options}
+        </select>
+      </div>
+    )
+  })
 
   return (
     <ListGroup>
-      {charas.map((char, x) => (
-        <ListGroup.Item key={x}>
-          <Swap choices={charas} position={x} onChange={doSwap} />
-        </ListGroup.Item>
-      ))}
+      {listItems}
     </ListGroup>
   )
 }

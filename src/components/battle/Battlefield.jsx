@@ -9,7 +9,6 @@ function Battlefield ({ theme }) {
   // Left and right sides of the battlefield
   const [ charas, setCharas ] = useState([]);
   const charaData = JSON.parse(localStorage.getItem('saveData'));
-  const dark = 'bg-dark border-light text-light'
 
   useEffect(() => {
     if (charaData == null) {
