@@ -18,7 +18,7 @@ function Character ({ name }) {
 
   return (
     <div className="input-group mb-3">
-      <span class="input-group-text">{name}</span>
+      <span className="input-group-text">{name}</span>
       <Slot key="rhand" choices={hand}>RHand</Slot>
       <Slot key="lhand" choices={hand}>LHand</Slot>
       <Slot key="head" choices={head}>Head</Slot>

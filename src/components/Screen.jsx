@@ -3,7 +3,7 @@ import React from 'react'
 import Intro from './Intro'
 //
 import Item from './Item'
-import Magic from './Magic'
+import Skill from './Skill'
 import Equip from './Equip'
 import Status from './Status'
 import Order from './Order'
@@ -20,7 +20,7 @@ function Screen ({ page }) {
     <main>
       {page === 'intro' && <Intro />}
       {page === 'item' && <Item />}
-      {page === 'magic' && <Magic />}
+      {page === 'skill' && <Skill />}
       {page === 'equip' && <Equip />}
       {page === 'status' && <Status />}
       {page === 'order' && <Order />}
