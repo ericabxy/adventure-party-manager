@@ -2,8 +2,8 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import EnemyNames from './EnemyNames'
-import Actions from './Actions'
+import BattleTargets from './BattleTargets'
+import BattleCommands from './BattleCommands'
 
 function Information ({ theme }) {
   const enemies = [
@@ -17,10 +17,10 @@ function Information ({ theme }) {
   return (
     <Row>
       <Col>
-        <EnemyNames enemies={enemies} theme={theme} />
+        <BattleTargets enemies={enemies} theme={theme} />
       </Col>
       <Col>
-        <Actions theme={theme} />
+        <BattleCommands theme={theme} />
       </Col>
     </Row>
   )

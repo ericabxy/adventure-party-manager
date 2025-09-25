@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Sprite from '../Sprite'
-import Window from './Window'
+import Sprite from '../components/Sprite'
+import Window from './BattleIIWindow'
 
 function Battlefield ({ children }) {
   return (

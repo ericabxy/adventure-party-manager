@@ -11,9 +11,8 @@ import Change from '../pages/Change'
 import Config from '../pages/Config'
 import Save from '../pages/Save'
 //
-import Battle from './Battle'
-import BattleII from './BattleII'
-import BattleIII from './BattleIII'
+import Battle from '../pages/Battle'
+import BattleII from '../pages/BattleII'
 
 function Screen ({ page }) {
   return (

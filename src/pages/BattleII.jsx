@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-import Battlefield from './battleii/Battlefield'
-import Window from './battleii/Window'
+import Battlefield from './BattleIIField'
+import Window from './BattleIIWindow'
 
 function Battle ({  }) {
   const [ chars, setChars ] = useState([]);

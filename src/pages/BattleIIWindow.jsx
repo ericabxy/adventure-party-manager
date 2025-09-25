@@ -1,7 +1,7 @@
 import React from 'react'
 
-import EnemyNames from './EnemyNames'
-import PartyHp from './PartyHp'
+import EnemyNames from './BattleIIEnemyNames'
+import PartyHp from './BattleIIPartyHp'
 
 function Window ({ children }) {
   return (

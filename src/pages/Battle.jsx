@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 
-import Actions from './battle/Actions'
-import Battlefield from './battle/Battlefield'
-import EnemyNames from './battle/EnemyNames'
-import Enemies from './battle/Enemies'
-import Information from './battle/Information'
-import Party from './battle/Party'
-import PartyHp from './battle/PartyHp'
+import BattleField from './BattleField'
+import BattleInfo from './BattleInfo'
+import BattleHp from './BattleHp'
 
 function Battle ({  }) {
   // Battle I lays out the battlefield using React Bootstrap components
@@ -55,11 +50,11 @@ function Battle ({  }) {
     <Container className={outer}>
       <Row>
         <Col>
-          <Battlefield theme={theme} />
-          <Information theme={theme} />
+          <BattleField theme={theme} />
+          <BattleInfo theme={theme} />
         </Col>
         <Col xs={3}>
-          <PartyHp charas={chars} theme={theme} />
+          <BattleHp charas={chars} theme={theme} />
         </Col>
       </Row>
     </Container>

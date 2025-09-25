@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import skeleton1 from '../../assets/skeleton_1.png'
+import skeleton1 from '../assets/skeleton_1.png'
 
 function Enemies ({ enemyList, theme }) {
   const targetlist = [
