@@ -1,11 +1,13 @@
-import React from 'react';
-import Portrait from './Portrait.jsx';
+import React from 'react'
+import SpriteFace from '../components/SpriteFace'
 
-function Character ({ chara, name, variant }) {
-  //
+function Character (props) {
+  const { chara, name, variant } = props
   return (
     <div>
-      <Portrait className={`${chara} ${variant}`} />
+      <SpriteFace>
+        {`${chara}--${variant}`}
+      </SpriteFace>
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <div>{name ? name : '?'}</div>
         <div>{chara.charAt(0).toUpperCase() + chara.slice(1)}</div>
@@ -19,4 +21,4 @@ function Character ({ chara, name, variant }) {
   )
 }
 
-export default Character;
+export default Character

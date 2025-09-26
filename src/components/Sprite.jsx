@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Sprite ({ children, dir = '' }) {
-  console.log(`sprite ${children} ${dir}`);
+function Sprite (props) {
+  const { angle, children, frame } = props
   return (
-    <div className={`sprite ${children} ${dir}`} />
+    <div className={`sprite sprite--${angle} ${children} sprite--${frame}`} />
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 function EquipSlot (props) {
-  const { children, choices } = props;
+  const { children, choices } = props
   return (
     <select className="form-select">
       <option>{children}...</option>

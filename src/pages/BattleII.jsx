@@ -17,7 +17,7 @@ function Battle ({  }) {
 
   return (
     <>
-      <Battlefield />
+      <Battlefield party={chars} />
       <Window />
     </>
   )

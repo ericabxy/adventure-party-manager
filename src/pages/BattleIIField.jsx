@@ -3,13 +3,16 @@ import React from 'react'
 import Sprite from '../components/Sprite'
 import Window from './BattleIIWindow'
 
-function Battlefield ({ children }) {
+function Battlefield (props) {
+  const { party } = props
   return (
     <div className="battlefield">
-      <Sprite dir="west">warrior femme</Sprite>
-      <Sprite dir="west">magician masc</Sprite>
-      <Sprite dir="west">healer femme</Sprite>
-      <Sprite dir="west">ninja masc</Sprite>
+      {party.map((element, x) => (
+        <div
+          className={`sprite--attack ${element.charaset}--${element.variant} sprite--a sprite--3`}
+          key={x}
+        />
+      ))}
     </div>
   )
 }

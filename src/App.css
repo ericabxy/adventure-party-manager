@@ -2,7 +2,7 @@
 @import url('./styles/bootstrap');
 @import url('./styles/party');
 @import url('./styles/portrait');
-@import url('./styles/sprite');
+@import url('./styles/Sprite');
 
 main {
   max-width: 600px;

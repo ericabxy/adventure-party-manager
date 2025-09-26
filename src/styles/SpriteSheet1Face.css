@@ -1,0 +1,76 @@
+.sprite--face {
+  --width: 4.5em;
+  --height: 4.5em;
+  --iw: calc(var(--width) * 6);
+  --ih: calc(var(--height) * 2);
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-size: var(--iw) var(--ih);
+  image-rendering: pixelated;
+  width: var(--width);
+  height: var(--height);
+}
+
+.sprite--face.warrior--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+}
+
+.sprite--face.warrior--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-y: calc(var(--height));
+}
+
+.sprite--face.magician--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 5);
+}
+
+.sprite--face.magician--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position: -48px 48px;
+  background-position-x: calc(var(--width) * 5);
+  background-position-y: calc(var(--height));
+}
+
+.sprite--face.healer--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 4);
+}
+
+.sprite--face.healer--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 4);
+  background-position-y: calc(var(--height));
+}
+
+.sprite--face.ninja--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 3);
+}
+
+.sprite--face.ninja--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 3);
+  background-position-y: calc(var(--height));
+}
+
+.sprite--face.ranger--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 2);
+}
+
+.sprite--face.ranger--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width) * 2);
+  background-position-y: calc(var(--height));
+}
+
+.sprite--face.townfolk--masc {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width));
+}
+
+.sprite--face.townfolk--femme {
+  background-image: url('../assets/charaset_faces_1st_sheet_update.png');
+  background-position-x: calc(var(--width));
+  background-position-y: calc(var(--height));
+}

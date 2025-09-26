@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-function Portrait ({ className, variant }) {
-  console.log(className, variant);
+function Portrait (props) {
+  const { charaset, variant } = props
   return (
-    <div className={`portrait left ${className} ${variant}`}>
-    </div>
+    <div
+      className={`sprite--face ${charaset}--${variant}`}
+      style={{float: 'left'}}
+    />
   )
 }
 
-export default Portrait;
+export default Portrait

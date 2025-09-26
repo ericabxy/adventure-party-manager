@@ -2,18 +2,18 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import Sprite from '../components/Sprite'
-
-function Party ({ charas, theme }) {
+function Party (props) {
+  const { charas, theme } = props
   return (
     <Card className={theme}>
       <Card.Header>Party</Card.Header>
       <Card.Body>
-        <ListGroup>
-          {charas.map((chara, x) => (
-              <Sprite key={x} dir="west">warrior femme</Sprite>
+          {charas.map((element, x) => (
+              <div
+                className={`sprite--attack ${element.charaset}--${element.variant} sprite--3`}
+                key={x}
+              />
           ))}
-        </ListGroup>
       </Card.Body>
     </Card>
   )

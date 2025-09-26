@@ -1,0 +1,58 @@
+.sprite--attack {
+  --width: 2em;
+  --height: 2.25em;
+  --iw: calc(var(--width) * 4);
+  --ih: calc(var(--height) * 4);
+  background-size: var(--iw) var(--ih);
+  image-rendering: pixelated;
+  width: var(--width);
+  height: var(--height);
+}
+
+.sprite--attack.warrior--masc {
+  background-image: url('../assets/warrior_a_attack.png');
+}
+
+.sprite--attack.warrior--femme {
+  background-image: url('../assets/warrior_b_attack.png');
+}
+
+.sprite--attack.magician--masc {
+  background-image: url('../assets/magician_a_attack.png');
+}
+
+.sprite--attack.magician--femme {
+  background-image: url('../assets/magician_b_attack.png');
+}
+
+.sprite--attack.healer--masc {
+  background-image: url('../assets/healer_a_attack.png');
+}
+
+.sprite--attack.healer--femme {
+  background-image: url('../assets/healer_b_attack.png');
+}
+
+.sprite--attack.ninja--masc {
+  background-image: url('../assets/ninja_a_attack.png');
+}
+
+.sprite--attack.ninja--femme {
+  background-image: url('../assets/ninja_b_attack.png');
+}
+
+.sprite--attack.ranger--masc {
+  background-image: url('../assets/ranger_a_attack.png');
+}
+
+.sprite--attack.ranger--femme {
+  background-image: url('../assets/ranger_b_attack.png');
+}
+
+.sprite--attack.townfolk--masc {
+  background-image: url('../assets/townfolk_a_attack.png');
+}
+
+.sprite--attack.townfolk--femme {
+  background-image: url('../assets/townfolk_b_attack.png');
+}

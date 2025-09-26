@@ -22,8 +22,8 @@ function ChangeCharacter ({ char, onDelete, onEdit }) {
     <div className="party-edit">
       <ChangeCharaset value={charaset} onClick={setCharaset} />
       <div className="party-portrait">
-        <Sprite>
-          {`${charaset} ${variant} west step-0`}
+        <Sprite frame="b" angle="2">
+          {`${charaset}--${variant}`}
         </Sprite>
       </div>
       <input
