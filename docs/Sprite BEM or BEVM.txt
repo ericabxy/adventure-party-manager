@@ -1,0 +1,34 @@
+Sprite BEM or BEVM
+==================
+
+A block
+
+An *element* is part of a block and cannot be used separately. It is not necessarily a physical child of a block (?).
+
+A *modifier* is a name that changes the appearance, behavior, or state of a block or element. Cannot be used in isolation. Sprite uses modifiers to specify the animation frame or directional angle of the tile.
+
+A variant
+
+/* blocks */
+.sprite {}         /* base 16x18 antifarea walking tileset with 3 columns
+                      (frames) and 4 rows (angles) */
+.sprite-attack {}  /* extra 18x20 pose tileset with 4 columns and 4 rows */
+.sprite-face {}    /* matching 48x48 portraits for each 16x18 sprite */
+
+/* appearance modifiers */
+.sprite--warrior-a {}
+.sprite--warrior-b {}
+.sprite-attack--magician-a {}
+.sprite-attack--magician-b {}
+.sprite-face--healer-a {}
+.sprite-face--healer-b {}
+
+/* state modifiers */
+.sprite--a {}        /* x position or column to locate tile in sprite sheet */
+.sprite--b {}
+.sprite--frame-c {}  /* alternate naming for tile used in animation sequence */
+.sprite--frame-d {}
+.sprite--1 {}        /* y position or row to locate tile in sprite sheet */
+.sprite--2 {}
+.sprite--angle-3 {}  /* alternate naming for tile used to indicate direction */
+.sprite--angle-4 {}

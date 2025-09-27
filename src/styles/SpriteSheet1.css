@@ -1,47 +1,47 @@
-.sprite.warrior--masc {
+.sprite--warrior-masc {
   background-image: url('../assets/warrior_a.png');
 }
 
-.sprite.warrior--femme {
+.sprite--warrior-femme {
   background-image: url('../assets/warrior_b.png');
 }
 
-.sprite.magician--masc {
+.sprite--magician-masc {
   background-image: url('../assets/magician_a.png');
 }
 
-.sprite.magician--femme {
+.sprite--magician-femme {
   background-image: url('../assets/magician_b.png');
 }
 
-.sprite.healer--masc {
+.sprite--healer-masc {
   background-image: url('../assets/healer_a.png');
 }
 
-.sprite.healer--femme {
+.sprite--healer-femme {
   background-image: url('../assets/healer_b.png');
 }
 
-.sprite.ninja--masc {
+.sprite--ninja-masc {
   background-image: url('../assets/ninja_a.png');
 }
 
-.sprite.ninja--femme {
+.sprite--ninja-femme {
   background-image: url('../assets/ninja_b.png');
 }
 
-.sprite.ranger--masc {
+.sprite--ranger-masc {
   background-image: url('../assets/ranger_a.png');
 }
 
-.sprite.ranger--femme {
+.sprite--ranger-femme {
   background-image: url('../assets/ranger_b.png');
 }
 
-.sprite.townfolk--masc {
+.sprite--townfolk-masc {
   background-image: url('../assets/townfolk_a.png');
 }
 
-.sprite.townfolk--femme {
+.sprite--townfolk-femme {
   background-image: url('../assets/townfolk_b.png');
 }

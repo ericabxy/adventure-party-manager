@@ -7,7 +7,6 @@
   --height: 2.25em;
   --iw: calc(var(--width) * 3);
   --ih: calc(var(--height) * 4);
-  background-image: url('../assets/charaset_template.png');
   background-size: var(--iw) var(--ih);
   image-rendering: pixelated;
   width: var(--width);

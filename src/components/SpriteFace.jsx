@@ -4,8 +4,8 @@ function SpriteFace (props) {
   const { children } = props
   return (
     <div
-      className={`sprite--face ${children}`}
-      style={{float: 'left'}}
+      className={`sprite-face sprite-face--${children}`}
+      style={{ float: 'left' }}
     />
   )
 }

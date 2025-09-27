@@ -4,8 +4,8 @@ function Portrait (props) {
   const { charaset, variant } = props
   return (
     <div
-      className={`sprite--face ${charaset}--${variant}`}
-      style={{float: 'left'}}
+      className={`sprite-face sprite--${charaset}-${variant}`}
+      style={{ float: 'left' }}
     />
   )
 }

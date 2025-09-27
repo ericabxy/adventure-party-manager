@@ -1,11 +1,11 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 
-function PartyHp ({ charas, theme }) {
+function BattleHp ({ charas, theme }) {
   return (
     <>
       {charas.map((chara, x) => (
-        <Card className={`chara-hp-box ${theme}`}>
+        <Card className={`chara-hp-box ${theme}`} key={x}>
           <Card.Body>
             <Card.Title>{chara.firstname ? chara.firstname : '????'}</Card.Title>
             <Card.Text>HP: 20</Card.Text>
@@ -16,4 +16,4 @@ function PartyHp ({ charas, theme }) {
   )
 }
 
-export default PartyHp
+export default BattleHp

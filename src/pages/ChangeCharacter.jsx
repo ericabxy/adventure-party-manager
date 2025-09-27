@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import ChangeCharaset from './ChangeCharaset'
-import ChangeVariant from './ChangeVariant'
 import Sprite from '../components/Sprite'
 
 function ChangeCharacter ({ char, onDelete, onEdit }) {
-  const [ charaset, setCharaset ] = useState(char.charaset);
-  const [ variant, setVariant ] = useState(char.variant);
-  const [ firstname, setFirstname ] = useState(char.firstname);
+  const [ charaset, setCharaset ] = useState(char.charaset)
+  const [ variant, setVariant ] = useState(char.variant)
+  const [ firstname, setFirstname ] = useState(char.firstname)
 
   // Update callback if anything has changed
   useEffect(() => {
@@ -15,7 +14,7 @@ function ChangeCharacter ({ char, onDelete, onEdit }) {
       charaset: charaset,
       variant: variant,
       firstname: firstname
-    });
+    })
   }, [charaset, variant, firstname])
 
   return (
@@ -23,7 +22,7 @@ function ChangeCharacter ({ char, onDelete, onEdit }) {
       <ChangeCharaset value={charaset} onClick={setCharaset} />
       <div className="party-portrait">
         <Sprite frame="b" angle="2">
-          {`${charaset}--${variant}`}
+          {`${charaset}-${variant}`}
         </Sprite>
       </div>
       <input
